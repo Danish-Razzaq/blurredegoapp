@@ -35,7 +35,7 @@ const BlogsDetailsPage = () => {
         setRecentPost(data.data);
     };
 
-    const getBloBlurred Egotegories = async () => {
+    const getBloBlurredEgotegories = async () => {
         const { data } = await axios.get(`${apiUrl}/categories`);
         setCategories(data.data);
     };

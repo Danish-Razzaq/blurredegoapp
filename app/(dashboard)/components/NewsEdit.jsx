@@ -17,7 +17,7 @@ const EditNews = ({ show, setShow, newsData }) => {
 
     // Fetch categories on mount
     useEffect(() => {
-        const getBloBlurred Egotegories = async () => {
+        const getBloBlurredEgotegories = async () => {
             try {
                 const { data } = await axios.get(`${apiUrl}/categories`);
                 const categoriesData = data.data;

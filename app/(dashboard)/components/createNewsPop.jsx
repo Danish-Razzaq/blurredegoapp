@@ -18,7 +18,7 @@ const CreateNewsPopUp = ({ show, setShow }) => {
     // api calling for  fetching from category  specially news and find the news values and set this into hook form category when
     // component is mounting on first time
 
-    const getBloBlurred Egotegories = async () => {
+    const getBloBlurredEgotegories = async () => {
         try {
             const { data } = await axios.get(`${apiUrl}/categories`);
             const categoriesData = data.data;
