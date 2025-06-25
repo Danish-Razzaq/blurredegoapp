@@ -2,7 +2,7 @@ import networkingImg from '@/public/assets/imgs/page/homepage1/networking.png';
 import globalcardService from '@/public/assets/imgs/page/homepage1/globalcardservice.png';
 import financial from '@/public/assets/imgs/page/homepage1/financial.png';
 import marketing from '@/public/assets/imgs/page/homepage1/marketing.png';
-import BlurredEgo from '@/public/assets/imgs/page/homepage1/gca.png';
+import BlurredEgo from '@/public/assets/imgs/page/homepage1/GCA.png';
 import news from '@/public/assets/imgs/page/homepage1/news.png';
 
 export const ServicesCartData = [
