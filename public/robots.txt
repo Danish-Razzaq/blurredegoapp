@@ -1,8 +1,8 @@
 User-agent: *
 Disallow: 
-Disallow: https://Blurred Egohkg.com/pages/dashboard
-Disallow: https://Blurred Egohkg.com/apps/users
-Disallow: https://Blurred Egohkg.com/apps/application
-Disallow: https://Blurred Egohkg.com/apps/members
-Disallow: https://Blurred Egohkg.com/apps/invoice
-Sitemap: https://Blurred Egohkg.com/sitemap.xml
+Disallow: https://gcahkg.com/pages/dashboard
+Disallow: https://gcahkg.com/apps/users
+Disallow: https://gcahkg.com/apps/application
+Disallow: https://gcahkg.com/apps/members
+Disallow: https://gcahkg.com/apps/invoice
+Sitemap: https://gcahkg.com/sitemap.xml

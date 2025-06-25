@@ -19,12 +19,12 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
     const [currentStep, setCurrentStep] = useState(0);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [selectedImages, setSelectedImages] = useState({});
-    const [isBlurred EgoMember, setIsBlurred EgoMember] = useState(null);
+    const [isGcaMember, setIsGcaMember] = useState(null);
     const [totalPayment, setTotalPayment] = useState(0); // Default registration fee for the main attendee
     const [previewCompanyLogo, setPreviewCompanyLogo] = useState(null);
     const [previewFormalPhoto, setPreviewFormalPhoto] = useState(null);
     const [previewFormalPhoto2, setPreviewFormalPhoto2] = useState(null);
-    const [itsMemberOfBlurred Ego, setItsMemberOfBlurred Ego] = useState(false);
+    const [itsMemberOfGCA, setItsMemberOfGCA] = useState(false);
     const [eventRegistrationFee, setEventRegistrationFee] = useState(0);
     const [sponsorshipFields, setSponsorshipFields] = useState([]);
     const [previousDiscount, setPreviousDiscount] = React.useState(0);
@@ -69,7 +69,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
     });
     const memberId = watch('memberId');
 
-    // console.log('itsMemberOfBlurred Ego', itsMemberOfBlurred Ego);
+    // console.log('itsMemberOfGCA', itsMemberOfGCA);
 
     const calculateRegistrationFee = () => {
         const memberId = watch('memberId');
@@ -83,14 +83,14 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
         let registrationFee;
 
         if (currentDate <= earlyBirdFeeDate) {
-            if (memberId && itsMemberOfBlurred Ego && isBlurred EgoMember) {
+            if (memberId && itsMemberOfGCA && isGcaMember) {
                 // Member
                 registrationFee = earlyBirdFeeOfMember;
             } else {
                 registrationFee = earlyBirdNormalFee;
             }
         } else {
-            if (memberId && itsMemberOfBlurred Ego) {
+            if (memberId && itsMemberOfGCA) {
                 registrationFee = memberNormalFee;
             } else {
                 registrationFee = nonMemberNormalFee;
@@ -112,7 +112,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
 
     useEffect(() => {
         calculateRegistrationFee();
-    }, [itsMemberOfBlurred Ego]);
+    }, [itsMemberOfGCA]);
 
     const totalPaymentInUSD = totalPayment + Number(eventRegistrationFee) + (fields.length > 0 ? fields.length * Number(eventRegistrationFee) : 0) || 0; // Calculate total payment in USD
 
@@ -122,7 +122,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
     };
 
     const handleCheckboxChange = (value) => {
-        setIsBlurred EgoMember(value === 'yes');
+        setIsGcaMember(value === 'yes');
     };
 
     const handleSearch = async () => {
@@ -142,7 +142,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                     const matchedMember = filteredData?.[0];
 
                     // console.log('Matched Member:', matchedMember);
-                    setItsMemberOfBlurred Ego(true);
+                    setItsMemberOfGCA(true);
                     setShowMemberIdPopUp(false);
                     handleCheckboxChange('yes');
 
@@ -192,8 +192,8 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
 
     const handleCheckboxNotMember = (value) => {
         if (value === 'no') {
-            setIsBlurred EgoMember(false);
-            setItsMemberOfBlurred Ego(false);
+            setIsGcaMember(false);
+            setItsMemberOfGCA(false);
             calculateRegistrationFee();
         }
     };
@@ -299,7 +299,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
             const generateEventTrackingId = () => {
                 const timestamp = Date.now();
                 const randomPart = Math.floor(1000 + Math.random() * 9000);
-                const eventId = `Blurred Ego-EVT-${timestamp}-${randomPart}`;
+                const eventId = `GCA-EVT-${timestamp}-${randomPart}`;
                 return eventId;
             };
 
@@ -744,7 +744,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                         type="text"
                                         {...register('memberId', { required: 'Member ID is required' })}
                                         className="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                        placeholder="Enter Member ID (e.g., Blurred Ego-2025-0001)"
+                                        placeholder="Enter Member ID (e.g., GCA-2025-0001)"
                                     />
                                 </div>
 
@@ -778,15 +778,15 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
 
                                         <div className="flex w-full items-center justify-center gap-2">
                                             <label className="block text-nowrap text-lg font-medium text-gray-700">
-                                                Blurred Ego Member? <div className="inline-block text-red-600">*</div>
+                                                GCA Member? <div className="inline-block text-red-600">*</div>
                                             </label>
                                             <div className="mt-2 flex w-full flex-wrap">
                                                 <label className="mr-2 block text-sm font-medium text-gray-700">
                                                     <input
                                                         type="checkbox"
                                                         value="yes"
-                                                        checked={isBlurred EgoMember === true}
-                                                        {...register('isBlurred EgoMember')}
+                                                        checked={isGcaMember === true}
+                                                        {...register('isGcaMember')}
                                                         onChange={() => {
                                                             // handleCheckboxChange('yes');
                                                             setShowMemberIdPopUp(true);
@@ -799,8 +799,8 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                                     <input
                                                         type="checkbox"
                                                         value="no"
-                                                        checked={isBlurred EgoMember === false}
-                                                        {...register('noBlurred EgoMember')}
+                                                        checked={isGcaMember === false}
+                                                        {...register('noGcaMember')}
                                                         onChange={() => {
                                                             handleCheckboxNotMember('no'); // Handle checkbox state change
                                                         }}
@@ -810,10 +810,10 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                                 </label>
                                             </div>
                                         </div>
-                                        {isBlurred EgoMember === null && <p className="mt-1 text-sm text-red-600">Please select if you are a Blurred Ego member or not</p>}
+                                        {isGcaMember === null && <p className="mt-1 text-sm text-red-600">Please select if you are a GCA member or not</p>}
 
                                         {/* Conditional Input Field for Member ID */}
-                                        {isBlurred EgoMember && (
+                                        {isGcaMember && (
                                             <>
                                                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                                                     <div className="col-span-1">
@@ -830,7 +830,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                                                     disabled
                                                                     value={memberId}
                                                                     className="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                                                                    placeholder="Enter Member ID (e.g., Blurred Ego-2025-0001)"
+                                                                    placeholder="Enter Member ID (e.g., GCA-2025-0001)"
                                                                 />
                                                             </div>
 
@@ -995,8 +995,8 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                         <div className="my-2  flex items-start">
                                             <input type="checkbox" {...register('liabilityWaiver', { required: 'Please agree to the liability waiver' })} className="mr-2" />
                                             <label className="block text-sm font-medium text-gray-700">
-                                                I hereby agree that upon registering to the first Blurred Ego (BE) Conference 2025, I am taking full responsibility of my actions and I fully
-                                                understand that the organizer, The entire Blurred Ego team will not be held responsible in any event of injury, accident, personal loss and/or
+                                                I hereby agree that upon registering to the first Geo Cargo Alliance (GCA) Conference 2025, I am taking full responsibility of my actions and I fully
+                                                understand that the organizer, The entire Geo Cargo Alliance team will not be held responsible in any event of injury, accident, personal loss and/or
                                                 illness during the event.
                                             </label>
                                         </div>
@@ -1008,7 +1008,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                                                 <input type="checkbox" {...register('termsAndConditionBox1', { required: 'Please agree to the terms and conditions' })} className="mr-2 " />
                                                 <label className=" text-sm font-medium text-gray-700">
                                                     This is to confirm that I am not an owner/administrator/board member or adviser to other freight forwarding networks/alliances, profit or non-profit
-                                                    oriented. I agree that if any form of link is established that my membership can be cancelled without refund and agree that Blurred Ego may terminate my
+                                                    oriented. I agree that if any form of link is established that my membership can be cancelled without refund and agree that GCA may terminate my
                                                     attendance/members and inform all members/attendees of my termination including other network owners, associations and alliances.
                                                 </label>
                                             </span>
@@ -1083,11 +1083,11 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
                     // Next Button (all other steps)
                     <button
                         onClick={() =>
-                            isBlurred EgoMember !== null
+                            isGcaMember !== null
                                 ? handleSubmit(() => setCurrentStep((prev) => Math.min(stepsCreateFormFields.length - 1, prev + 1)))()
-                                : alert('Please select if you are a Blurred Ego member or not')
+                                : alert('Please select if you are a GCA member or not')
                         }
-                        disabled={isBlurred EgoMember === null} // Disable the button if no checkbox is checked
+                        disabled={isGcaMember === null} // Disable the button if no checkbox is checked
                         className="btn btn-brand-1 flex items-center gap-2"
                     >
                         Next
