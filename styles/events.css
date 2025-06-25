@@ -1,0 +1,102 @@
+.box-red-content {
+    background: linear-gradient(to right, rgba(222, 41, 16, 1), rgba(222, 41, 16, 0.25));
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+}
+.box-events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-event {
+    background: white;
+    width: 282px;
+    height: 222px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.event-info-box {
+    background-color: white; /* white with 80% opacity */
+    color: white;
+    border-radius: 5px;
+    /* box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1); */
+    /* border: 4px solid #de2810e3; */
+    /* border-left: 3px solid #de2810e3;
+    border-top: 3px solid #de2810e3; */
+}
+
+.tag {
+    padding: 7px 10px 7px 11px;
+    background: #de2810e3;
+    border-radius: 0px;
+    color: white;
+    font-size: 15px;
+    box-shadow: none;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.hero-previous-events{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+
+
+
+@media screen and (max-width: 596px) {
+    .card-event {
+        margin: 0px 10px;
+        width: 100%;
+    }
+    .hero-previous-events{
+        padding-left: 10px;
+    }
+}
+
+.event-slider-left {
+    background-color: rgba(222, 41, 16, 1);
+    color: white;
+}
+.event-slider-right {
+    background-color: rgba(51, 51, 51, 1);
+}
+
+@media screen and (max-width: 425px) {
+    .video-slider {
+        /* margin: 0px auto; */
+        width: 370px;
+    }
+}
+@media screen and (max-width: 376px) {
+    .video-slider {
+        /* margin: 0px auto; */
+        width: 15%;
+    }
+}
+@media screen and (max-width: 330px) {
+    .eventCol {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .box-events-container {
+        position: absolute;
+    }
+}

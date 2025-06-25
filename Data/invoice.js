@@ -1,0 +1,92 @@
+export const dummyInvoices = [
+  {
+    id: 'INV001',
+    attributes: {
+      invoiceId: 'INV-2024-0001',
+      name: 'Alice Johnson',
+      createdAt: '2024-05-12T10:15:00Z',
+      companyName: 'Johnson Consulting Ltd.',
+      amount: 500,
+      discount: 50,
+      Invoice_data: {
+        isCustomInvoice: false,
+        bankFees: 50,
+      },
+      sentToMember: false,
+      received: false,
+      membershipExpiry: '2025-05-12',
+    },
+  },
+  {
+    id: 'INV002',
+    attributes: {
+      invoiceId: 'INV-2024-0002',
+      name: 'Mohammad Ali',
+      createdAt: '2024-06-01T08:45:00Z',
+      companyName: 'Ali Tech Solutions',
+      amount: 750,
+      discount: 100,
+      Invoice_data: {
+        isCustomInvoice: true,
+        bankFees: 30,
+      },
+      sentToMember: true,
+      received: true,
+      membershipExpiry: '2025-06-01',
+    },
+  },
+  {
+    id: 'INV003',
+    attributes: {
+      invoiceId: 'INV-2024-0003',
+      name: 'Sophie Zhang',
+      createdAt: '2024-06-10T14:30:00Z',
+      companyName: 'Zhang Enterprises',
+      amount: 1000,
+      discount: 0,
+      Invoice_data: {
+        isCustomInvoice: false,
+        bankFees: 50,
+      },
+      sentToMember: false,
+      received: false,
+      membershipExpiry: '',
+    },
+  },
+  {
+    id: 'INV004',
+    attributes: {
+      invoiceId: 'INV-2024-0004',
+      name: 'John Doe',
+      createdAt: '2024-06-15T09:00:00Z',
+      companyName: 'Doe Innovations',
+      amount: 1200,
+      discount: 200,
+      Invoice_data: {
+        isCustomInvoice: true,
+        bankFees: 25,
+      },
+      sentToMember: true,
+      received: false,
+      membershipExpiry: '2025-06-15',
+    },
+  },
+  {
+    id: 'INV005',
+    attributes: {
+      invoiceId: 'INV-2024-0005',
+      name: 'Maria Garcia',
+      createdAt: '2024-06-20T11:25:00Z',
+      companyName: 'Garcia Holdings',
+      amount: 650,
+      discount: 0,
+      Invoice_data: {
+        isCustomInvoice: false,
+        bankFees: 50,
+      },
+      sentToMember: false,
+      received: true,
+      membershipExpiry: '',
+    },
+  },
+];

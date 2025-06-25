@@ -1,0 +1,23 @@
+/* WorldMap.css */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Style all paths */
+.world-map-container path {
+  fill-rule: evenodd;
+  fill: lightgray;
+  stroke: white;
+  transition: fill 0.3s ease;
+}
+
+/* Hover style */
+.world-map-container path:hover {
+  fill: gray;
+  cursor: pointer;
+}
+
+
+
+

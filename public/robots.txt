@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: 
+Disallow: https://Blurred Egohkg.com/pages/dashboard
+Disallow: https://Blurred Egohkg.com/apps/users
+Disallow: https://Blurred Egohkg.com/apps/application
+Disallow: https://Blurred Egohkg.com/apps/members
+Disallow: https://Blurred Egohkg.com/apps/invoice
+Sitemap: https://Blurred Egohkg.com/sitemap.xml

@@ -1,0 +1,33 @@
+.PaymentStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-color: #f4f4f4; /* Light gray background */
+    font-family: Arial, sans-serif;
+}
+
+.PaymentStatus h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.PaymentStatus p {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+.success-message {
+    color: #28a745; /* Green color */
+}
+
+.processing-message {
+    color: #ffc107; /* Yellow color */
+}
+
+.error-message {
+    color: #dc3545; /* Red color */
+}
