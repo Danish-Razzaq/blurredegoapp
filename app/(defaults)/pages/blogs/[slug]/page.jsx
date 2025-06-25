@@ -42,7 +42,7 @@ const BlogsDetailsPage = () => {
     useEffect(() => {
         getBlogData();
         getRecentBlogPosts();
-        getBloBlurred Egotegories();
+        getBloBlurredEgotegories();
     }, []);
 
     // console.log('singlePost', singlePost);

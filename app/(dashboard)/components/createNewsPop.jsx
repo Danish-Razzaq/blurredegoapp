@@ -35,7 +35,7 @@ const CreateNewsPopUp = ({ show, setShow }) => {
         }
     };
     useEffect(() => {
-        getBloBlurred Egotegories();
+        getBloBlurredEgotegories();
     }, []);
 
     // console.log('categories', categories);

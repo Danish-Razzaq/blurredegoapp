@@ -32,7 +32,7 @@ const EditNews = ({ show, setShow, newsData }) => {
                 console.error('Error fetching categories:', error);
             }
         };
-        getBloBlurred Egotegories();
+        getBloBlurredEgotegories();
     }, []);
 
     const {
