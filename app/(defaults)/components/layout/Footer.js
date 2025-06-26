@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer1({}) {
     const googleMapsUrl =
-        'https://www.google.com/maps/search/?api=1&query=Unit+39%2C14%2FF%2C+Block+D%2C+Wah+Lok+Industrial+Centre%2C+No.31-35+Shan+Mei+Street%2C+Fo+Tan%2C+Shatin%2C+New+Territories%2C+Hong+Kong';
+        'https://maps.app.goo.gl/dEqG6mrzjB1kX2rq5';
     return (
         <>
             <footer className="footer">
@@ -63,13 +63,13 @@ export default function Footer1({}) {
                                     <li>
                                         <Link href="mailto:Info@blurredego.com">Info@blurredego.com</Link>
                                     </li>
-                                    <li>  <Link href="https://wa.me/85269327488"  target="_blank" rel="noopener noreferrer">
-                                                +852 6932 7488
+                                    <li>  <Link href="https://wa.me/447413099266"  target="_blank" rel="noopener noreferrer">
+                                                +447 4130 99266
                                             </Link></li>
                                     <li>
                                         {' '}
                                         <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-                                            Unit 39,14/F, Block D, Wah Lok Industrial Centre, No.31-35 Shan Mei Street, Fo Tan, Shatin, New Territories, Hong Kong
+                                          128 City Rd, London EC1V 2NX, UK
                                         </Link>
                                     </li>
                                 </ul>

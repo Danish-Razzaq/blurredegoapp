@@ -16,9 +16,10 @@ import { FcApproval } from 'react-icons/fc';
 import { IoMdContact } from 'react-icons/io';
 import { ImBackward } from 'react-icons/im';
 import { isMemberManager } from '@/utils/helperFunctions';
+import {dummyParticipants} from '@/Data/eventParticipants'
 const Participants = () => {
     const { slug } = useParams();
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(dummyParticipants);
     const [openDropdown, setOpenDropdown] = useState({});
     const [searchByEmail, setSearchByEmail] = useState('');
     const [searchByCompany, setSearchByCompany] = useState('');
@@ -88,11 +89,11 @@ const Participants = () => {
             render: (params) => {
                 return (
                     <div className="flex items-center justify-center" style={{}}>
-                        {params.formalPhoto.length > 0 ? (
+                        {/* {params.formalPhoto.length > 0 ? (
                             <img src={`${process.env.NEXT_PUBLIC_IMG_URL}${params?.formalPhoto}`} alt="avatar" className="h-9 w-9   rounded-full" />
-                        ) : (
+                        ) : ( */}
                             <IoMdContact size={30} />
-                        )}
+                        {/* )} */}
                     </div>
                 );
             },
@@ -180,12 +181,12 @@ const Participants = () => {
                 // now i want to open a component on click of this button and pass the item to that component
                 <div className="relative text-center">
                     <div
-                        className={`popup ${isManager ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                        className={`popup ${true ? 'cursor-pointer' : 'cursor-not-allowed'}`}
                         onClick={() => {
-                            if (isManager) {
+                            // if (isManager) {
                                 setOpenPopup(true);
                                 setSelectedItem(item);
-                            }
+                            // }
                         }}
                         title={isManager ? '' : 'You do not have permission to update status'}
                     >

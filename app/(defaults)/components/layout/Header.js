@@ -45,8 +45,8 @@ export default function Header({ topBarStyle, handleMobileMenuOpen }) {
                                         ></path>
                                     </svg>
                                     Hotline:{' '}
-                                    <Link href="https://wa.me/85269327488" className="text-white  hover:text-green-500" target="_blank" rel="noopener noreferrer">
-                                        +852 6932 7488
+                                    <Link href="https://wa.me/447413099266" className="text-white  hover:text-green-500" target="_blank" rel="noopener noreferrer">
+                                        +447 4130 99266
                                     </Link>
                                 </span>
                                 <Link className="email-icon" href="mailto:Info@blurredego.com">

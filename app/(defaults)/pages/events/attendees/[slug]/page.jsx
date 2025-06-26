@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { IoMdContact } from 'react-icons/io';
 import GenericTable from '@/components/GenericTable';
 import '@/styles/events.css';
+import {attendeeDummy} from '@/Data/attendees.js'
 
 const Attendee = () => {
     const Params = useParams();
@@ -60,11 +61,11 @@ const Attendee = () => {
             header: 'Company Logo',
             render: (item) => (
                 <div className="flex items-center justify-center">
-                    {item.companyLogo ? (
-                        <img src={`${process.env.NEXT_PUBLIC_IMG_URL}${item.companyLogo}`} alt="avatar" className="h-9 w-9 rounded-full object-cover" />
-                    ) : (
+                    {/* {item.companyLogo ? (
+                        <img src={`${item.companyLogo}`} alt="avatar" className="h-9 w-9 rounded-full object-cover" />
+                    ) : ( */}
                         <IoMdContact className="h-9 w-9 text-gray-400" />
-                    )}
+                    {/* )} */}
                 </div>
             ),
         },
@@ -100,13 +101,13 @@ const Attendee = () => {
           <div className="box-red-content min-[1360px]:py-10 max-md:top-5  min-[1440px]:h-[250px]  absolute  top-28 h-fit w-full    max-lg:top-7">
             <h1 className="color-main min-[1370px]:font-extrabold max-md:text-2xl   container font-bold">ATTENDEE LIST
             </h1>
-            <h1 className="color-main min-[1370px]:font-extrabold max-md:text-2xl   container font-bold">Welcome to Bangkok, Thailand </h1>
+            <h1 className="color-main min-[1370px]:font-extrabold max-md:text-2xl   container font-bold">Welcome to the United Kingdom – where tradition meets innovation.</h1>
 
           </div>
         </div>
       </div>
             <div className="container mx-auto px-4 py-8">
-                <GenericTable data={attendeeData} columns={columns} />
+                <GenericTable data={attendeeDummy} columns={columns} />
             </div>
         </Layout>
     );

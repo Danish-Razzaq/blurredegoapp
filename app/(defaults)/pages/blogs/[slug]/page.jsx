@@ -13,12 +13,21 @@ import Link from 'next/link';
 import RichTextRenderer from '@/components/RichTextRenderer';
 import NotFound from '@/app/not-found';
 
+import { dummyNews} from '@/Data/dummyNews'
 const BlogsDetailsPage = () => {
     const router = useRouter();
     const { slug } = useParams();
     const [singlePost, setSinglePost] = useState();
     const [recentPost, setRecentPost] = useState();
     const [categories, setCategories] = useState();
+
+    useEffect(() => {
+        const post = dummyNews.find((item) => String(item.id) === String(slug));
+        if (post) {
+            setSinglePost(post);
+        }
+    }, [slug]);
+
 
     const [search, setSearch] = useState('');
 
@@ -39,11 +48,11 @@ const BlogsDetailsPage = () => {
         const { data } = await axios.get(`${apiUrl}/categories`);
         setCategories(data.data);
     };
-    useEffect(() => {
-        getBlogData();
-        getRecentBlogPosts();
-        getBloBlurredEgotegories();
-    }, []);
+    // useEffect(() => {
+    //     getBlogData();
+    //     getRecentBlogPosts();
+    //     getBloBlurredEgotegories();
+    // }, []);
 
     // console.log('singlePost', singlePost);
 
@@ -65,9 +74,9 @@ const BlogsDetailsPage = () => {
         router.push(`/pages/blogs/search/${search}`);
     };
 
-    if (!singlePost) {
-        return  <Layout><NotFound /></Layout>;
-    }
+    // if (!singlePost) {
+    //     return  <Layout><NotFound /></Layout>;
+    // }
 
     return (
         <Layout>
@@ -80,7 +89,7 @@ const BlogsDetailsPage = () => {
                         <div
                             className="flex  flex-col rounded-lg bg-white  p-3  sm:shadow-sm" >
                             <img
-                                src={`${imgUrl}${singlePost?.attributes?.coverImage?.data?.attributes?.url}`}
+                                src={`${singlePost?.attributes?.coverImage?.data?.attributes?.url}`}
                                 // alt={blog?.title}
                                 style={{ height: 'auto', width: '100%', objectFit: 'cover', aspectRatio: '16/9' }}
                                 className="img-fluid w-full cursor-pointer  transition-all duration-300 ease-out hover:opacity-80 "
@@ -95,7 +104,7 @@ const BlogsDetailsPage = () => {
                             {/* Blog Content */}
                             <div className="blogContent  text-lg leading-relaxed text-gray-700 ">
                                 <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
-                                    {singlePost?.attributes?.content}
+                                    {singlePost?.attributes?.description || singlePost?.attributes?.content}
                                 </ReactMarkdown>
                                 {/* Add more content sections as needed */}
                             </div>

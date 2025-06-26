@@ -297,10 +297,7 @@ const PreviewInvoice = () => {
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">(HKD/RMB/USD/EUR/GBP)</div>
                                 </div>
-                                <div className="flex items-end  ">
-                                    <img src="/assets/images/invoiceimg.png" alt="logo" className="w-96 " />
-                                    {/* <img src="/assets/images/stamp.png" alt="logo" className=" h-56 w-56 max-lg:h-32 max-lg:w-32 " /> */}
-                                </div>
+                                
                             </div>
                         </div>
                         <img src="/assets/images/invoicefooter.svg" alt="footer" className="h-[20%] w-full" />

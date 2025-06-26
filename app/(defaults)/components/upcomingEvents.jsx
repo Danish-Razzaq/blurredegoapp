@@ -4,17 +4,17 @@ import '@/styles/events.css';
 import { FiClock } from 'react-icons/fi';
 import DownloadButtonForm from '@/components/DownloadButtonForms';
 const Card = ({ event, index }) => {
-    const { attributes } = event;
+    const  attributes  = event;
 
     const imgUrl = process.env.NEXT_PUBLIC_IMG_URL;
     const getCoverImageUrl = (event) => {
-        if (!event.attributes.event_banner_image?.data?.attributes?.url) return null;
+        if (!event.attributes?.event_banner_image?.data?.attributes?.url) return null;
         return imgUrl + event.attributes.event_banner_image?.data?.attributes?.url;
     };
 
     // console.log('event', attributes);
 
-    const coverImageUrl = getCoverImageUrl(event);
+    // const coverImageUrl = getCoverImageUrl(event);
 
     // console.log('coverImageUrl', coverImageUrl);
 
@@ -47,9 +47,9 @@ const Card = ({ event, index }) => {
                         <div className="flex items-center gap-1">
                             <FiClock color="white" size={20} />
                             <span className="wow animate__animated animate__fadeIn text-white">
-                                <span>{formatDate(attributes.starting_date)}</span>
+                                <span>{formatDate(attributes?.starting_date)}</span>
                                 <span className="mx-2">-</span>
-                                <span>{formatDate(attributes.ending_date)}</span>
+                                <span>{formatDate(attributes?.ending_date)}</span>
                             </span>
                         </div>
                         <div className="mt-2 flex flex-wrap gap-4">
@@ -85,15 +85,12 @@ const Card = ({ event, index }) => {
                                     </svg>
                                 </Link>
                             </div>
-                            <DownloadButtonForm fileUrl={'https://dashboard.Blurred Egohkg.com/uploads/Blurred Ego_1st_annual_conference_2025_fced25a3ed.pdf'} fileName="Conference Brochure" />
+                            <DownloadButtonForm fileUrl={'https://dashboard.BlurredEgohkg.com/uploads/Blurred Ego_1st_annual_conference_2025_fced25a3ed.pdf'} fileName="Conference Brochure" />
                         </div>
                     </div>
                     <div className={`event-Image-box flex w-full ${index % 2 === 1 ? '' : 'justify-end'}`} style={{ alignItems: 'center' }}>
-                        {coverImageUrl ? (
-                            <img className="object-cover lg:h-[600px]" src={coverImageUrl} alt="event" width={1008} height={652} />
-                        ) : (
-                            <img src="/assets/imgs/page/events/event2.webp" alt="event" width={1008} height={552} />
-                        )}
+                            <img className="object-cover lg:h-[600px]" src={attributes?.bannerImg} alt="event" width={1008} height={652} />
+                       
                     </div>
                 </div>
             </section>
@@ -102,13 +99,13 @@ const Card = ({ event, index }) => {
 };
 
 const UpcomingEvents = ({ events }) => {
-    // console.log('event inside', events);
+    console.log('event inside', events);
     return (
         <div>
             <h3 className="color-brand-1 cnt-center  container" style={{ fontWeight: '900', marginTop: '50px' }}>
                 Upcoming Conferences 2025
             </h3>
-            {events.map((event, index) => (
+           {Object?.values(events).map((event, index) => (
                 <Card event={event} index={index} />
             ))}
         </div>

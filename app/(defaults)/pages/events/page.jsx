@@ -4,12 +4,13 @@ import Layout from '../../components/layout/Layout';
 import '@/styles/events.css';
 import { ImCalendar } from 'react-icons/im';
 import UpcomingEventsPage from '../../components/upcomingEvents';
+import { eventsdummy } from '@/Data/events'; // Import dummy data for testing
 import axios from 'axios';
 // import PreviousEvents from './PreviousEvents';
 
 const Events = () => {
     const [Event, setEvent] = React.useState('upcomingEvent');
-    const [events, setEvents] = React.useState([]);
+    const [events, setEvents] = React.useState(eventsdummy);
 
     // console.log('events', events);
 
@@ -20,16 +21,16 @@ const Events = () => {
             const response = await axios.get(`${apiUrl}/events?filters[event_deleted][$eq]=false&populate=*`);
             // console.log('event', response);
             if (response.status === 200) {
-                setEvents(response?.data?.data);
+                // setEvents(response?.data?.data);
             }
         } catch (error) {
             console.error('Error fetching events:', error);
         }
     };
 
-    useEffect(() => {
-        getEvents();
-    }, []);
+    // useEffect(() => {
+    //     getEvents();
+    // }, []);
 
     return (
         <>
@@ -61,7 +62,7 @@ const Events = () => {
                         <div className="flex flex-wrap justify-center gap-8 text-nowrap text-center">
                             <button
                                 className={`w-[381px] rounded-md px-6 py-3  text-lg font-bold uppercase transition duration-300 ${
-                                    Event === 'upcomingEvent' ? 'red text-white hover:bg-red-600' : 'bg-gray-400 text-gray-800 hover:bg-gray-500'
+                                    Event === 'upcomingEvent' ? 'red text-white hover:bg-[#30cfce]' : 'bg-gray-400 text-gray-800 hover:bg-gray-500'
                                 }`}
                                 onClick={() => setEvent('upcomingEvent')}
                             >
@@ -69,7 +70,7 @@ const Events = () => {
                             </button>
                             <button
                                 className={`w-[381px] rounded-md px-6 py-3 text-lg font-bold uppercase transition duration-300 ${
-                                    Event === 'previousEvents' ? 'red text-white hover:bg-red-600' : 'bg-gray-400 text-gray-800 hover:bg-gray-500'
+                                    Event === 'previousEvents' ? 'red text-white hover:bg-[#30cfce]' : 'bg-gray-400 text-gray-800 hover:bg-gray-500'
                                 }`}
                                 onClick={() => setEvent('previousEvents')}
                             >
@@ -80,17 +81,17 @@ const Events = () => {
                 </section>
 
                 {Event === 'upcomingEvent' ? (
-                    events.length > 0 ? (
+                    // events.length > 0 ? (
                         <UpcomingEventsPage events={events} />
-                    ) : (
-                        <div className="section cnt-center mt-110 text-center">
-                            <h2 className="color-brand-1">
-                                Currently, there are no upcoming events scheduled.
-                                <br />
-                                Please check back later for updates.
-                            </h2>
-                        </div>
-                    )
+                    // ) : (
+                    //     <div className="section cnt-center mt-110 text-center">
+                    //         <h2 className="color-brand-1">
+                    //             Currently, there are no upcoming events scheduled.
+                    //             <br />
+                    //             Please check back later for updates.
+                    //         </h2>
+                    //     </div>
+                    // )
                 ) : (
                     /* events.length > 0 ? (
         <PreviousEvents events={events} />

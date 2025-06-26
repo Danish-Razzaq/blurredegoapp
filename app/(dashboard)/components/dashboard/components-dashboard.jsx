@@ -37,7 +37,7 @@ const StatCard = ({ icon, total, title, items, bgColor }) => (
 );
 
 const Overview = () => {
-    // const usersRecord = useSelector((state) => state?.users?.users) || [];
+    const usersRecord = useSelector((state) => state?.users?.users) || [];
     const [applicationRecordCount, setApplicationRecordCount] = React.useState([]);
     const [invoiceRecordCount, setInvoiceRecordCount] = React.useState([]);
 
@@ -48,7 +48,7 @@ const Overview = () => {
         return getApplicationData;
     };
     const getInvoices = async () => {
-        // let result = await apiCaller('get', 'invoices?populate=*');
+        let result = await apiCaller('get', 'invoices?populate=*');
         if (result.err) console.log('Err getting invoices', result.err);
         else if (result.data) {
             // console.log('getInvoices'); // DEBUG
@@ -56,14 +56,14 @@ const Overview = () => {
             setInvoiceRecordCount(result?.data?.filter((invoice) => invoice?.attributes?.isDeleted === false));
         }
     };
-    // useEffect(() => {
-    //     fetchData();
-    //     getInvoices();
-    // }, []);
+    useEffect(() => {
+        fetchData();
+        getInvoices();
+    }, []);
 
     // users count
-    // const userRecordCount = usersRecord.length > 0 ? usersRecord?.filter((user) => user?.isDeleted === false) || 0 : [];
-    // const verifiedUser = userRecordCount?.filter((user) => user?.confirmed === true)?.length || 0;
+    const userRecordCount = usersRecord.length > 0 ? usersRecord?.filter((user) => user?.isDeleted === false) || 0 : [];
+    const verifiedUser = userRecordCount?.filter((user) => user?.confirmed === true)?.length || 0;
     // application count
     const approveApplicationCount = applicationRecordCount?.filter((app) => app?.attributes?.approved === true)?.length || 0;
     const unApprovedApplicationCount = applicationRecordCount?.filter((app) => app?.attributes?.approved === false)?.length || 0;
@@ -80,11 +80,11 @@ const Overview = () => {
     const data = [
         {
             icon: Users,
-            total: `${130}`,
+            total: `${userRecordCount?.length || 130}`,
             title: 'All Users',
             bgColor: 'bg-[#FFE2E5]',
             items: [
-                { label: 'Verified', value: `${1700}`, bg: 'bg-[#FA5A7D]', textColor: 'text-white' },
+                { label: 'Verified', value: `${verifiedUser || '180'}`, bg: 'bg-[#FA5A7D]', textColor: 'text-white' },
                 // { label: 'Un-Verified', value: `${unVerifiedUser}`, bg: 'bg-white', textColor: 'text-gray-700' },
             ],
         },

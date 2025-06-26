@@ -174,11 +174,11 @@ const ApprovePopup = ({ item, onCancel, event_name_reg }) => {
                         <div className="grid grid-cols-2 gap-6">
                             <div>
                                 <p className="text-sm font-bold">Company Name</p>
-                                <p className="mt-1 text-gray-500">{item.companyName}</p>
+                                <p className="mt-1 text-gray-500">{item.companyName || "Texh Naky Co"}</p>
                             </div>
                             <div>
                                 <p className="text-sm font-bold">Event ID</p>
-                                <p className="mt-1 text-gray-500">{item.event_taking_id}</p>
+                                <p className="mt-1 text-gray-500">{item.event_taking_id || "BE-123231-123123-13-1313"}</p>
                             </div>
                             <div>
                                 <p className="text-sm font-bold">Selected Sponsorships</p>

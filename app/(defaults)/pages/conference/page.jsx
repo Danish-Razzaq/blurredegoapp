@@ -7,9 +7,13 @@ import Link from 'next/link';
 import DownloadButtonForm from '@/components/DownloadButtonForms';
 
 const Conference = () => {
+
     const [selectedEvent, setSelectedEvent] = React.useState(null);
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
+
 
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
@@ -48,7 +52,7 @@ const Conference = () => {
             </div>
             <section className="section cnt-center mt-110 ">
                 <div className="cnt-center  container ">
-                    <h2 className="text-center  text-2xl sm:text-5xl">Blurred Ego IS EXCITED TO ANNOUNCE THE 1st ANNUAL CONFERENCE 2025 IN BANGKOK, THAILAND!</h2>
+                    <h2 className="text-center  text-2xl sm:text-5xl">Blurred Ego is excited to unveil its First Annual Conference 2025 — a groundbreaking gathering you won’t want to miss!</h2>
 
                     <div className="mt-12 flex justify-center">
                         <div className="flex max-w-6xl flex-col gap-8 lg:flex-row">
@@ -56,9 +60,7 @@ const Conference = () => {
                             <div className="p-6 lg:w-1/2">
                                 <div className="pt-3">
                                     <p className="animate-fade-in text-2xl font-bold">
-                                        We are happy to invite you to the Blurred Ego 1st Annual Conference 2025, happening in the cultural city of Bangkok, Thailand. This event is a great opportunity to
-                                        connect with industry leaders, professionals, and partners from around the world to share ideas, and build meaningful connections. With an expected turnout of
-                                        200+ participants, this conference promises to be an unforgettable highlight of the year!
+                                        We are happy to invite you to the Blurred Ego 1st Annual Conference 2025 — a unique opportunity to connect with industry leaders, professionals, and partners from across the globe. Join us as we share ideas, foster innovation, and build meaningful relationships. With over 200 participants expected, this conference is set to be one of the most memorable highlights of the year!
                                     </p>
                                 </div>
                             </div>
@@ -163,7 +165,8 @@ const Conference = () => {
                 </div>
             </section>{' '}
             <section className="cnt-center mt-50 container">
-                <h2 className="text-center text-2xl sm:px-12 sm:text-5xl">Save the Date for Blurred Ego’s 1st Annual Conference 2025! June 27th – 30th, 2025 | Friday to Monday</h2>
+                <h2 className="text-center text-2xl sm:px-12 sm:text-5xl">Mark your calendars for Blurred Ego’s First Annual Conference 2025!
+📅 Dec 27–30, 2025 | Friday to Monday</h2>
 
                 <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                     {/* <Link
@@ -174,7 +177,7 @@ const Conference = () => {
                         See Who’s Attending
                     </Link> */}
                     <Link
-                        href={`/pages/events/attendees/${selectedEvent?.event_name}`}
+                        href={`/pages/events/attendees/BE-Event-1`}
                         className="btn btn-brand-1-big wow animate__animated animate__fadeIn  h-14 text-nowrap  rounded px-2 font-bold "
                         style={{
                             fontSize: '1.5rem',
@@ -183,7 +186,7 @@ const Conference = () => {
                         See Who’s Attending
                     </Link>
                     <Link
-                        href={`/pages/events/${selectedEvent?.event_name}`}
+                        href={`/pages/events/BE-Event-1`}
                         className="btn btn-brand-1-big wow animate__animated animate__fadeIn  h-14 text-nowrap  rounded px-2 font-bold "
                         style={{
                             fontSize: '1.5rem',

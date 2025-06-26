@@ -11,10 +11,11 @@ import TakingPopup from './TakingPopup';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
+import {singleEvent} from '@/Data/events'
 
 const EventRegistration = () => {
     const { slug } = useParams();
-    const [event, setSingleEvent] = useState(null);
+    // const [event, setSingleEvent] = useState(eventsdummy);
     const [eventRegistrationData, setEventRegistrationData] = useState(null);
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [trackingId, setTrackingID] = useState(null);
@@ -22,8 +23,13 @@ const EventRegistration = () => {
     // const [notification, setNotification] = React.useState(null);
     // console.log('formSubmitted', formSubmitted);
     // console.log('trackingId', trackingId);
+    // console.log('dummy event', eventsdummy);
 
     // console.log(`The applicable event fee is: ${eventFee}`);
+
+    const event = singleEvent;
+
+    console.log('event', event);
 
     useEffect(() => {
         if (formSubmitted) {
@@ -69,12 +75,12 @@ const EventRegistration = () => {
 
     //  get tracking id from local storage
 
-    const getEvents = async () => {
-        const response = await axios.get(`${apiUrl}/events?filters[event_name][$eq]=${slug}`);
-        const event = response?.data?.data[0];
-        // console.log('event api response ', event);
-        setSingleEvent(event);
-    };
+    // const getEvents = async () => {
+    //     const response = await axios.get(`${apiUrl}/events?filters[event_name][$eq]=${slug}`);
+    //     const event = response?.data?.data[0];
+    //     // console.log('event api response ', event);
+    //     setSingleEvent(event);
+    // };
 
     const getEventRegistrationData = async () => {
         try {
@@ -103,10 +109,10 @@ const EventRegistration = () => {
         // console.log('event registration data', response);
     };
 
-    useEffect(() => {
-        getEvents();
-        getEventRegistrationData();
-    }, []);
+    // useEffect(() => {
+    //     getEvents();
+    //     getEventRegistrationData();
+    // }, []);
 
     // console.log('eventRegistrationData', eventRegistrationData);
 
@@ -128,8 +134,8 @@ const EventRegistration = () => {
                             Info@blurredego.com
                         </Link>{' '}
                         or{' '}
-                        <Link href="https://wa.me/85269327488" target="_blank" rel="noopener noreferrer">
-                            +852 6932 7488
+                        <Link href="https://wa.me/447413099266" target="_blank" rel="noopener noreferrer">
+                            +447 4130 99266
                         </Link>
                         .
                         <br />
@@ -210,21 +216,21 @@ const EventRegistration = () => {
                             <div className="mx-1 h-fit  w-fit  ">
                                 <h1 className="wow animate__animated animate__fadeIn text-4xl  font-extrabold  text-white md:text-7xl">Online Registration</h1>
                                 <h1 className="wow animate__animated animate__fadeIn  pb-1 text-4xl font-extrabold text-white md:text-7xl">
-                                    {`${event?.attributes?.city},${event?.attributes?.country}`}{' '}
+                                    {`${event?.city},${event?.country}`}{' '}
                                 </h1>
-                                <p className="wow animate__animated animate__fadeIn line-clamp-4 max-w-3xl  pb-1 font-normal text-white ">{event?.attributes?.event_description} </p>
+                                <p className="wow animate__animated animate__fadeIn line-clamp-4 max-w-3xl  pb-1 font-normal text-white ">{event?.event_description} </p>
                                 <div className="flex items-center gap-1 text-white">
                                     <img src="/assets/imgs/page/events/clock.png" alt="clock" className="h-6 w-6" />
-                                    {formatDate(event?.attributes?.starting_date)} - {formatDate(event?.attributes?.ending_date)}
+                                    {formatDate(event?.starting_date)} - {formatDate(event?.ending_date)}
                                 </div>
                                 <div className="max-[370px]:flex-col  flex flex-grow gap-4 pt-2  text-white">
                                     <div className="  flex flex-col  gap-1">
                                         <span className="btn btn-tag wow animate__animated animate__fadeIn w-fit text-nowrap  text-white">Expected Attendance</span>
-                                        <p className="max-md:text-3xl text-4xl font-extrabold">{event?.attributes?.expected_attendance}</p>
+                                        <p className="max-md:text-3xl text-4xl font-extrabold">{event?.expected_attendance}</p>
                                     </div>
                                     <div className="flex flex-col gap-1">
                                         <span className="btn btn-tag wow animate__animated animate__fadeIn w-fit text-white ">Organizer</span>
-                                        <p className="max-md:text-3xl  text-4xl font-extrabold">{event?.attributes?.organizer}</p>
+                                        <p className="max-md:text-3xl  text-4xl font-extrabold">{event?.organizer}</p>
                                     </div>
                                 </div>
                             </div>

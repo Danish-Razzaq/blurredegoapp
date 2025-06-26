@@ -7,6 +7,7 @@ import NewsSliderBlog from '../../components/slider/NewsSliderBlog';
 import NewsCaracol from '../../components/slider/NewsCaracol';
 import NewsFilter from '../../components/NewsFilter';
 import { filterNews } from '@/utils/filterNews';
+import { dummyNews } from '@/Data/dummyNews'; // Import dummy data for testing
 import Head from 'next/head';
 export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -126,14 +127,14 @@ export default function Blog() {
                     <h2 className="my-4 text-center">Our Blogs</h2>
                     <div className="cnt-center container">
                         <div className="row flex justify-evenly">
-                            {currentPosts?.map((post) => (
+                            {dummyNews?.map((post) => (
                                 <div key={post.id} className="wow animate__animated animate__fadeIn mb-2 md:w-[45%] lg:w-[24%]">
                                     <Link href={`/pages/blogs/${post?.attributes?.slug}`} className="card-blog-grid hover-up flex h-full flex-col">
                                         <div className="card-image flex-grow-0">
                                             <img
                                                 className="" // Ensures same width and height for all images, object-cover keeps aspect ratio
                                                 style={{ height: '240px', width: '100%', objectFit: 'cover' }}
-                                                src={`${imgUrl}${post?.attributes?.coverImage?.data?.attributes?.url}`}
+                                                src={`${post?.attributes?.coverImage?.data?.attributes?.url}`}
                                                 alt={post?.attributes?.title}
                                             />
                                         </div>
@@ -146,7 +147,7 @@ export default function Blog() {
                                             <div>
                                                 <div className="line-border" />
                                                 <div className="d-flex align-items-center justify-content-between mt-5 pt-0">
-                                                    <Link className="btn btn-link-brn font-sm" href={`/pages/blogs/${post?.attributes?.slug}`}>
+                                                    <Link className="btn btn-link-brn font-sm" href={`/pages/blogs/${post?.id}`}>
                                                         View Details
                                                         <span>
                                                             <svg className="icon-16 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

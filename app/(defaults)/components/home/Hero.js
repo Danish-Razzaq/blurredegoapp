@@ -1,10 +1,8 @@
 import Hero1Slider from '../slider/HeroSlider';
 import Link from 'next/link';
-import bannerImage from '../../../../public/assets/imgs/page/homepage1/banner.webp';
-
+import bannerImage from '../../../../public/assets/imgs/page/homepage1/hero.png';
 
 export default function Hero() {
-
     return (
         <>
             <section className="section">
@@ -15,14 +13,19 @@ export default function Hero() {
                                 <p className="font-md color-white mb-15 wow animate__animated animate__fadeIn" data-wow-delay=".0s">
                                     Your Gateway to Global Logistics Excellence
                                 </p>
-                                <h1 className="color-white   mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
-                                    Connecting the World’s <br className="d-none d-lg-block" />
-                                    <span> Independent Freight Forwarders</span>
+                                <h1 className="color-white mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+                                    Empowering the Future of <br className="d-none d-lg-block" />
+                                    <span>Global Logistics & Networking</span>
                                 </h1>
+
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <p className="font-md color-white wow animate__animated animate__fadeInUp mb-20" data-wow-delay=".0s">
-                                        Join a community dedicated to enhancing the capabilities of independent freight forwarders. Together, we create opportunities for growth and success in the <br className="d-none d-lg-block" /><span> global logistics market.</span>
+                                            <p>
+                                                Become part of a vibrant network focused on driving innovation and collaboration in logistics. Together, we unlock new possibilities in the
+                                                <br className="d-none d-lg-block" />
+                                                <span>global transportation and supply chain industry.</span>
+                                            </p>
                                         </p>
                                     </div>
                                 </div>

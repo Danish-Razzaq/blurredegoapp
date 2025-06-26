@@ -28,8 +28,8 @@ export default function BrandSlider() {
 
     const brandImagesLogos = [
         {
-            url: '/public/assets/imgs/slider/slider/logoimg (1).png',
-            alt: 'Brand Logo 1',
+            url: 'assets/imgs/slider/slider/logoimg (1).png',
+            alt: 'Brand Logo 12121', 
         },
         {
             url: 'assets/imgs/slider/slider/logoimg (2).png',

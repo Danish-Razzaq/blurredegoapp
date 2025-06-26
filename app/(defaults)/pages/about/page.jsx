@@ -77,7 +77,7 @@ export default function About() {
                 </section>
 
                 {/* Meet the President Section */}
-                <section className="section mt-100 position-relative ">
+                <section className="section mt-100 relative ">
                     <h1 className="color-primary-main wow animate__animated animate__fadeIn mb-[45px] text-center">Meet the President</h1>
                     <div className="cnt-center container">
                         {!matches3 ? (
@@ -86,7 +86,7 @@ export default function About() {
                                     <h3 className="color-primary-main color-brand-1 wow  animate__animated animate__fadeIn absolute mb-4">A Visionary Leader in Freight & Logistics Industry</h3>
                                     <div className="font-md color-grey-900 wow animate__animated animate__fadeIn my-16">
                                         <p className={`text-lg  ${!matches2 ? 'absolute mb-20 max-w-[960px]' : ''}`}>
-                                            Mr. Sohrab Khan is a highly accomplished professional in the logistics and freight forwarding industry with over 30 years of experience. Here's a summary of
+                                            Mr. Muhammad Hamza is a highly accomplished professional in the logistics and freight forwarding industry with over 30 years of experience. Here's a summary of
                                             his impressive career:
                                         </p>
 
@@ -103,46 +103,29 @@ export default function About() {
                                                 </li>
                                             ))}
                                         </ul>
-                                        {matches ? (
+                                        {/* {matches ? (
                                             <p className="color-grey-900 wow animate__animated animate__fadeIn text-lg ">
                                                 Mr. Khan's rich background positions him as a distinguished leader in networking within the freight forwarding sector. His experience and dedication to
                                                 the industry have made him a valuable asset to the logistics community.
                                             </p>
-                                        ) : null}
+                                        ) : null} */}
                                     </div>
                                 </div>
 
-                                <div className=" relative flex w-full items-end justify-end p-0">
-                                    <div className="flex h-full w-full items-center ">
-                                        <Image
-                                            className="animate__animated animate__fadeIn h-full w-full object-fill lg:rounded-r-[20px] "
-                                            src="/assets/imgs/page/about/shorab.webp"
-                                            alt="Mr. Sohrab Khan - President"
-                                            width={1600}
-                                            height={400}
-                                        />
-                                    </div>
-                                    <div className="quote-center shape-2" />
-                                </div>
+                              
                             </div>
-                        ) : (
-                            <img
-                                className="animate__animated animate__fadeIn h-full w-full object-fill shadow-none  "
-                                src="/assets/imgs/page/about/intro.webp"
-                                alt="Mr. Sohrab Khan - President Into"
-                            />
-                        )}
-                        {!matches2 ? (
+                        ) : null}
+                        {/* {!matches2 ? (
                             <p className=" presidentText font-md color-grey-900 wow animate__animated animate__fadeIn mb-20 max-w-[65%]    ">
-                                Mr. Khan's rich background positions him as a distinguished leader in networking within the freight forwarding sector. His experience and dedication to the industry
+                                Mr. Hamza rich background positions him as a distinguished leader in networking within the freight forwarding sector. His experience and dedication to the industry
                                 have made him a valuable asset to the logistics community.
                             </p>
-                        ) : null}
+                        ) : null} */}
                     </div>
                 </section>
 
                 {/* Team intro section */}
-                <section className="section  mt-14">
+                {/* <section className="section  mt-14 ">
                     <div className="cnt-center container overflow-hidden">
                         <h1 className="color-primary-main wow animate__animated animate__fadeIn mb-[40px] text-center">Leadership That Moves the World</h1>
                         <p className="font-md color-grey-900 wow animate__animated animate__fadeIn mx-auto mb-20 max-w-2xl text-center">
@@ -150,10 +133,10 @@ export default function About() {
                         </p>
                         <TeamIntroSlider />
                     </div>
-                </section>
+                </section> */}
 
                 {/* Simplifying complex shipping challenges Section */}
-                <section className="section mt-100 ">
+                <section className="section mt-52  ">
                     <div className="cnt-center container">
                         <div className="row flex items-center  justify-between  ">
                             <div className="mb-30     lg:w-[45%]">
@@ -241,7 +224,7 @@ export default function About() {
                 <section className="section mt-55 bg-1 position-relative py-20">
                     <div className="cnt-center color-main container space-y-3 text-center">
                         <h3 className="text-white">SHORT OF CUSTOMER?</h3>
-                        <h4 className="font-normal text-white">Welcome to Join Blurred Ego Blurred Ego</h4>
+                        <h4 className="font-normal text-white">Welcome to Join Blurred Ego</h4>
                     </div>
                 </section>
 

@@ -72,9 +72,9 @@ const StatsBanner = ({ country, city, BlurredEgo,Members }) => {
 
     return (
         <div ref={bannerRef} className="memberBanner red h-full w-full   gap-5 p-4  px-5  text-white sm:justify-center">
-            <StatItem icon={membersIcon} label="Members" value={BlurredEgo,Members} isVisible={isVisible} />
-            <StatItem icon={countryIcon} label="Countries" value={country} isVisible={isVisible} />
-            <StatItem icon={cityIcon} label="Cities" value={city} isVisible={isVisible} />
+            <StatItem icon={membersIcon} label="Members" value={BlurredEgo || 120} isVisible={isVisible} />
+            <StatItem icon={countryIcon} label="Countries" value={country || 50} isVisible={isVisible} />
+            <StatItem icon={cityIcon} label="Cities" value={city || 30} isVisible={isVisible} />
         </div>
     );
 };

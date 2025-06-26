@@ -34,9 +34,9 @@ const NewsPage = () => {
         }
     };
 
-    useEffect(() => {
-        getAllBlogs();
-    }, []);
+    // useEffect(() => {
+    //     getAllBlogs();
+    // }, []);
 
     // console.log('news', news);
     const columns = [

@@ -5,7 +5,7 @@ import Brands from '../../components/home/Brands';
 
 export default function Contact() {
     const googleMapsUrl =
-        'https://www.google.com/maps/search/?api=1&query=Unit+39%2C14%2FF%2C+Block+D%2C+Wah+Lok+Industrial+Centre%2C+No.31-35+Shan+Mei+Street%2C+Fo+Tan%2C+Shatin%2C+New+Territories%2C+Hong+Kong';
+        'https://maps.app.goo.gl/dEqG6mrzjB1kX2rq5';
     return (
         <>
             <header>
@@ -16,7 +16,7 @@ export default function Contact() {
                 />
             </header>
             <Layout>
-                <Brands />
+                {/* <Brands /> */}
                 <div className="section d-block">
                     <div className="box-map-contact wow animate__animated animate__fadeIn">
                         <iframe
@@ -103,8 +103,8 @@ export default function Contact() {
                                                     ></path>
                                                 </svg>
                                                 Hotline:{' '}
-                                                <Link href="https://wa.me/85269327488" className="text-white" target="_blank" rel="noopener noreferrer">
-                                                    +852 6932 7488
+                                                <Link href="https://wa.me/447413099266" className="text-white" target="_blank" rel="noopener noreferrer">
+                                                    +447 4130 99266
                                                 </Link>
                                             </p>
                                             <p className="   mb-30 wow animate__animated animate__fadeIn">

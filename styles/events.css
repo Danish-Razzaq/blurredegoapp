@@ -1,5 +1,5 @@
 .box-red-content {
-    background: linear-gradient(to right, rgba(222, 41, 16, 1), rgba(222, 41, 16, 0.25));
+    background: linear-gradient(to right, #7fd5d5, #2a89898c);
     padding: 20px;
     color: white;
     display: flex;
@@ -70,7 +70,7 @@
 }
 
 .event-slider-left {
-    background-color: rgba(222, 41, 16, 1);
+    background-color: #30cfce;
     color: white;
 }
 .event-slider-right {
