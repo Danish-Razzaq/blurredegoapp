@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import { RiDeleteBinLine } from 'react-icons/ri';
-import { useSelector, useDispatch } from 'react-redux';
+// import { useSelector, useDispatch } from 'react-redux';
 import { setUsers } from '@/store/usersSlice';
 import { apiCaller } from '@/utils/api';
 import UsersFormPopup from '../../components/usersFormPopUp';
@@ -14,8 +14,8 @@ import IconSearch from '@/public/icon/icon-search';
 import SearchFields from '@/components/GenericSearchComponent';
 import { dummyUsers } from '@/Data/user';
 const Users = () => {
-    const usersRecord = useSelector((state) => state?.users?.users) || [];
-    const dispatch = useDispatch();
+    // const usersRecord = useSelector((state) => state?.users?.users) || [];
+    // const dispatch = useDispatch();
 
     // State variables for search input
     const [searchByName, setSearchByName] = useState('');
@@ -92,10 +92,10 @@ const Users = () => {
             });
             if (result?.err) console.log('error', result?.err);
             else {
-                let newUsers = usersRecord?.filter((u) => u?.id !== user?.id);
-                // showMessage('User deleted successfully');
-                dispatch(setUsers(newUsers));
-                SuccessNotification('User deleted successfully');
+                // let newUsers = usersRecord?.filter((u) => u?.id !== user?.id);
+                // // showMessage('User deleted successfully');
+                // dispatch(setUsers(newUsers));
+                // SuccessNotification('User deleted successfully');
             }
         }
     };
@@ -114,21 +114,21 @@ const Users = () => {
     };
 
     // set default role
-    useEffect(() => {
-        if (usersRecord && usersRecord.length > 0) {
-            const roleMap = {};
-            usersRecord.forEach((user) => {
-                if (user.regular) {
-                    roleMap[user.id] = 'Member';
-                } else if (user.memberManager) {
-                    roleMap[user.id] = 'Admin';
-                } else if (user.hasManagementRole) {
-                    roleMap[user.id] = 'Management';
-                }
-            });
-            setDefaultRole(roleMap);
-        }
-    }, [usersRecord]);
+    // useEffect(() => {
+    //     if (usersRecord && usersRecord.length > 0) {
+    //         const roleMap = {};
+    //         usersRecord.forEach((user) => {
+    //             if (user.regular) {
+    //                 roleMap[user.id] = 'Member';
+    //             } else if (user.memberManager) {
+    //                 roleMap[user.id] = 'Admin';
+    //             } else if (user.hasManagementRole) {
+    //                 roleMap[user.id] = 'Management';
+    //             }
+    //         });
+    //         setDefaultRole(roleMap);
+    //     }
+    // }, [usersRecord]);
 
     const getCountryName = (code) => {
         return countryMapping[code?.toUpperCase()] || 'Unknown Country'; // Default to 'Unknown Country' if the code is not found
