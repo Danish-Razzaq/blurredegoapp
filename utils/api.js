@@ -16,7 +16,7 @@ export const apiCaller = async (method, endpoint, body, headers) => {
 
   try {
     const response = await axios[method](
-      `${apiUrl}/${endpoint}`,
+      `${'http://localhost:1338/api'}/${endpoint}`,
       body ? body : header,
       body ? header : null
     );
