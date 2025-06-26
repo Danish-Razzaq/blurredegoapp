@@ -40,11 +40,11 @@ const ComponentsDashboardSales = () => {
         }
     };
 
-    useEffect(() => {
-        getAllUsers();
-        getApplicationData();
-        getInvoices();
-    }, []);
+    // useEffect(() => {
+    //     getAllUsers();
+    //     getApplicationData();
+    //     getInvoices();
+    // }, []);
 
     const [isMounted, setIsMounted] = useState(false);
     const [selectedPeriod, setSelectedPeriod] = useState('Monthly');

@@ -56,10 +56,10 @@ const Overview = () => {
             setInvoiceRecordCount(result?.data?.filter((invoice) => invoice?.attributes?.isDeleted === false));
         }
     };
-    useEffect(() => {
-        fetchData();
-        getInvoices();
-    }, []);
+    // useEffect(() => {
+    //     fetchData();
+    //     getInvoices();
+    // }, []);
 
     // users count
     const userRecordCount = usersRecord.length > 0 ? usersRecord?.filter((user) => user?.isDeleted === false) || 0 : [];
