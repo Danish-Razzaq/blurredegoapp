@@ -357,7 +357,7 @@ const CustomEventForm = ({ show, mode, eventData, onClose, setNotification, hand
 
                             <button
                                 type="submit"
-                                className={`w-24 rounded-md ${isSubmitting ? 'cursor-not-allowed bg-gray-400' : 'bg-red-600 hover:bg-red-700'} px-4 py-2 text-white focus:outline-none`}
+                                className={`w-24 rounded-md ${isSubmitting ? 'cursor-not-allowed bg-gray-400' : 'bg-[#30CFCE] hover:bg-red-700'} px-4 py-2 text-white focus:outline-none`}
                                 disabled={isSubmitting}
                             >
                                 {mode === 'create' ? (isSubmitting ? 'Submitting...' : 'Submit') : isSubmitting ? 'Updating...' : 'Update'}

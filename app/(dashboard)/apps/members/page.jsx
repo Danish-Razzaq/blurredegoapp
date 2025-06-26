@@ -156,7 +156,7 @@ const ComponentsAppsMembers = () => {
                                             <div className="flex justify-center">
                                                 <div
                                                     className="absolute bottom-20 z-10 flex h-[87px] w-[87px] items-center justify-center rounded-full border-b-2 border-red-600 bg-white"
-                                                    style={{ border: '3px solid #de2810' }}
+                                                    style={{ border: '3px solid #30cfce' }}
                                                 >
                                                     {contact?.companyLogo ? (
                                                         <img className="h-full w-full rounded-full" src={`${urlImageDomain}${contact?.companyLogo}`} alt="company logo" width={60} height={60} />

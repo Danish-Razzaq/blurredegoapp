@@ -1099,7 +1099,7 @@ const EventRegistrationForm = ({ event_name_reg, setFormSubmitted, setTrackingID
             {/* Progress indicator */}
             <div className="mt-4 flex justify-center gap-1">
                 {stepsCreateFormFields.map((_, index) => (
-                    <div key={index} className={`h-2 w-2 rounded-full ${index === currentStep ? 'bg-red-600' : 'bg-gray-300'}`} />
+                    <div key={index} className={`h-2 w-2 rounded-full ${index === currentStep ? 'bg-[#30CFCE]' : 'bg-gray-300'}`} />
                 ))}
             </div>
         </div>

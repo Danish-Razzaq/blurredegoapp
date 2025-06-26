@@ -1071,7 +1071,7 @@ const ApplicationForm = ({ setApplicationSubmitted, setShowSuccessNotification }
                             {page === 2 ? (
                                 <button
                                     type="submit"
-                                    className={`max-md:py-2 w-1/2 rounded-md px-4 py-3 text-white ${isChecked ? 'bg-red-600 hover:bg-red-700' : 'cursor-not-allowed bg-gray-400'}`}
+                                    className={`max-md:py-2 w-1/2 rounded-md px-4 py-3 text-white ${isChecked ? 'bg-[#30CFCE] hover:bg-red-700' : 'cursor-not-allowed bg-gray-400'}`}
                                     disabled={!isChecked}
                                 >
                                     {isSubmitted ? 'Application Submitting...' : 'Submit'}

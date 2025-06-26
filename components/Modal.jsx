@@ -13,7 +13,7 @@ const Modal = ({ isOpen, onClose, onConfirm, title, children }) => {
                     <button onClick={onClose} className="rounded bg-gray-500 px-4 py-2 text-white hover:bg-gray-600">
                         Cancel
                     </button>
-                    <button onClick={onConfirm} className="rounded bg-red-500 px-4 py-2 text-white hover:bg-red-600">
+                    <button onClick={onConfirm} className="rounded bg-red-500 px-4 py-2 text-white hover:bg-[#30CFCE]">
                         Confirm
                     </button>
                 </div>

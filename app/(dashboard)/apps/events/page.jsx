@@ -93,10 +93,10 @@ const Events = () => {
 
             <div className="mb-2 flex justify-end">
                 <button
-                    className={`hover:bg-red-400' rounded bg-red-500 px-4
-                    py-2 text-white `}
+                    className={`hover:bg-[rgb(62,143,143)] rounded bg-[#30CFCE] px-4
+                    py-2 mb-2 text-white `}
                     onClick={() => setShow(true)}
-                    disabled={!isMemberManager()}
+                    // disabled={!isMemberManager()}
                     title={!isMemberManager() ? 'You do not have permission to create events' : 'Create Event'}
                 >
                     Create Event

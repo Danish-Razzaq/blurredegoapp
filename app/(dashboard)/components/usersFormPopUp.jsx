@@ -148,7 +148,7 @@ const UsersFormPopup = ({ show, setShow, setShowSuccessUserCreated }) => {
         <>
             {show && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="mx-6 overflow-y-auto bg-white p-4  lg:w-1/3 max-lg:h-[80vh]">
+                    <div className="mx-6 overflow-y-auto bg-white p-4  lg:w-1/2  sm:h-[88vh]">
                         <div className="mb-3 flex items-center justify-between">
                             <div />
                             <h1 className="text-2xl ">Create User</h1>
@@ -156,7 +156,9 @@ const UsersFormPopup = ({ show, setShow, setShowSuccessUserCreated }) => {
                                 &times;
                             </button>
                         </div>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <form onSubmit={handleSubmit(onSubmit)} 
+                   
+                        >
                             <div className="row justify-between">
                                 <div className="col-md-12 mb-1">
                                     <h4 className="color-brand-1">Personal Info</h4>
