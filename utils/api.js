@@ -24,16 +24,16 @@ export const apiCaller = async (method, endpoint, body, headers) => {
   } catch (error) {
     console.error('API call error:', error);
 
-    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-        console.log(`this is the error of status ${error.response.status} token expired`);
-      if (!isSessionExpiredAlertShown) {
-        isSessionExpiredAlertShown = true; 
-        if (window.confirm('Session expired. Please log in again.')) {
-            window.location.href = '/login'; 
-            localStorage.removeItem('userData');
-        }
-      }
-    }
+    // if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+    //     console.log(`this is the error of status ${error.response.status} token expired`);
+    //   // if (!isSessionExpiredAlertShown) {
+    //   //   isSessionExpiredAlertShown = true; 
+    //   //   if (window.confirm('Session expired. Please log in again.')) {
+    //   //       window.location.href = '/login'; 
+    //   //       localStorage.removeItem('userData');
+    //   //   }
+    //   // }
+    // }
     return error.response ? error.response.data : { error: 'serverError' };
   }
 };

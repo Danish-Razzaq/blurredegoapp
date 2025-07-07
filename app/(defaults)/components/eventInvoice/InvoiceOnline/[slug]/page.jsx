@@ -115,7 +115,7 @@ export default function InvoicePage({}) {
 
             <div className="AppWrapperContainer">
                 <div className="AppWrapperLeftMain red">
-                    <Image className="wow  animate__animated animate__fadeIn mb-28 rounded-full" alt="Blurred Ego" src="/assets/imgs/template/logo.png " width={158} height={55} />
+                    <Image className="wow  animate__animated animate__fadeIn mb-28 rounded-full" alt="Blurred Ego" src="/assets/imgs/template/logo-w.webp " width={158} height={55} />
                     <div className="AppWrapperLeft">
                         <div>
                             <p className="wow animate__animated animate__fadeInUp -mb-2 font-bold text-gray-300 sm:text-lg">Total Amount:</p>
@@ -140,33 +140,25 @@ export default function InvoicePage({}) {
                     </div> */}
                     </div>
                 </div>
-                <div className="AppWrapper">
-                    {/* {clientSecret && (
-                        <Elements stripe={stripePromise} options={options}>
-                            <PaymentForm invoiceId={invoiceId} />
-                        </Elements>
-                    )} */}
-                    {/* dummy form look line atm card strpia  */}
+                <div class="flex min-h-screen items-center justify-center  text-white">
+                    <div class="w-full max-w-md rounded-xl bg-gray-500 p-6 shadow-lg">
+                        <h2 class="mb-2 text-2xl font-semibold text-white">Complete Your Payment</h2>
+                        <p class="mb-6 text-sm text-gray-300">Please enter your card details to complete the payment.</p>
 
-                    <div class="flex min-h-screen items-center justify-center  text-white">
-                        <div class="w-full max-w-md rounded-xl bg-gray-800 p-6 shadow-lg">
-                            <h2 class="mb-2 text-2xl font-semibold text-white">Complete Your Payment</h2>
-                            <p class="mb-6 text-sm text-gray-300">Please enter your card details to complete the payment.</p>
-
-                            <form>
-                                <input type="text" placeholder="Cardholder Name" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                                <input type="text" placeholder="Card Number" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                                <div class="mb-4 flex gap-4">
-                                    <input type="text" placeholder="MM/YY" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                                    <input type="text" placeholder="CVC" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                                </div>
-                                <button type="submit" class="w-full rounded bg-blue-600 py-2 font-semibold text-white hover:bg-blue-700">
-                                    Pay Now
-                                </button>
-                            </form>
-                        </div>
+                        <form>
+                            <input type="text" placeholder="Cardholder Name" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            <input type="text" placeholder="Card Number" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            <div class="mb-4 flex gap-4">
+                                <input type="text" placeholder="MM/YY" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <input type="text" placeholder="CVC" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+                            <button type="submit" class="red w-full rounded py-2 font-semibold text-white">
+                                Pay Now
+                            </button>
+                        </form>
                     </div>
                 </div>
+                <div></div>
             </div>
         </>
     );

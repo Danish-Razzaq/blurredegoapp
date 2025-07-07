@@ -89,11 +89,11 @@ export default function InvoicePage({}) {
             }
         };
         const fetchInvoiceData = async () => {
-            const user = getUser(); // Make sure to import this utility function correctly
-            if (!user) {
-                alert('Access restricted! Please log in to proceed with the payment.');
-                router.push('/login'); // Redirect to the login page
-            }
+            // const user = getUser(); // Make sure to import this utility function correctly
+            // if (!user) {
+            //     alert('Access restricted! Please log in to proceed with the payment.');
+            //     router.push('/login'); // Redirect to the login page
+            // }
             try {
                 const response = await fetch(`${apiUrl}/invoices/${invoiceId}`, {
                     method: 'GET',
@@ -125,7 +125,7 @@ export default function InvoicePage({}) {
             <title>Invoice Payment</title>
             <div className="AppWrapperContainer">
                 <div className="AppWrapperLeftMain red">
-                    <Image className="wow  animate__animated animate__fadeIn mb-28 rounded-full" alt="Blurred Ego" src="/assets/imgs/template/logo.png " width={158} height={55} />
+                    <Image className="wow  animate__animated animate__fadeIn mb-28 rounded-full" alt="Blurred Ego" src="/assets/imgs/template/logo-w.webp " width={158} height={55} />
                     <div className="AppWrapperLeft">
                         <div>
                             <p className="wow animate__animated animate__fadeInUp -mb-2 font-bold text-gray-300 sm:text-lg">Total Amount:</p>

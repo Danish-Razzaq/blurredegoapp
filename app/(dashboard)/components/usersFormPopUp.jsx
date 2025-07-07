@@ -148,7 +148,7 @@ const UsersFormPopup = ({ show, setShow, setShowSuccessUserCreated }) => {
         <>
             {show && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="mx-6 overflow-y-auto bg-white p-4  lg:w-1/2  sm:h-[88vh]">
+                    <div className="mx-6 overflow-y-auto bg-white p-4  lg:w-1/2 h-[75%] ">
                         <div className="mb-3 flex items-center justify-between">
                             <div />
                             <h1 className="text-2xl ">Create User</h1>

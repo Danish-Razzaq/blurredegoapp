@@ -293,7 +293,7 @@ const Users = () => {
     });
 
     return (
-        <div className="mx-auto p-4">
+        <div className="mx-auto py-4">
             <title>Blurred Ego | Applications</title>
 
             <SearchFields searchFields={searchFields} />

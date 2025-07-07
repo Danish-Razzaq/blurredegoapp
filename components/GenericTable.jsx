@@ -124,7 +124,7 @@ const GenericTable = ({ columns, data, renderRowActions, itemsPerPageOptions = [
             </div>
 
 
-            <div className="flex w-full items-center justify-between p-4">
+            <div className="flex w-full items-center justify-between p-4  max-lg:hidden ">
                 <div>
                     <button className="bg-gray-200 px-3 py-1 text-sm" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
                         Previous

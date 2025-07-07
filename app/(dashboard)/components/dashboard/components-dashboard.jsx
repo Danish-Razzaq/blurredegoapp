@@ -135,7 +135,7 @@ const Overview = () => {
                     </div>
                     <h1 className="text-3xl font-extrabold text-gray-800">
                         Welcome back,
-                        <span className="ml-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">{user?.name}!</span>
+                        <span className="ml-2 bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">{user?.name || "Admin"}!</span>
                     </h1>
                 </div>
                 <p className="pl-12 text-lg text-gray-600 flex align-items-center">We're glad to have you back. Here you can manage your activities, view your stats, and much more.
