@@ -25,10 +25,10 @@ module.exports = {
 
               
             colors: {
-                primary: '#30cfce',
+                primary: '#7e211f',
                     
                 secondary: {
-                    DEFAULT: '#805dca',
+                    DEFAULT: '#2a2725',
                     light: '#ebe4f7',
                     'dark-light': 'rgb(128 93 202 / 15%)',
                 },

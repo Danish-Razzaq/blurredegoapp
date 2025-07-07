@@ -263,7 +263,7 @@ const PreviewInvoice = () => {
                                 <div className="xl:1/3 text-nowrap lg:w-1/2  lg:text-lg  max-lg:text-xs">
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs">
                                         <div className="text-white-dark ">Account Name:</div>
-                                        <div className="whitespace-nowrap">Blurred Ego LIMITED</div>
+                                        <div className="whitespace-nowrap">LogiFem LIMITED</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs  ">
                                         <div className="text-white-dark">BANK NAME:</div>
@@ -279,7 +279,7 @@ const PreviewInvoice = () => {
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">
                                         <div className="text-nowrap text-white-dark">Multiple Currency Account No:</div>
-                                        <div className="text-nowrap">004-801-772609-838</div>
+                                        <div className="text-nowrap">004-801-773609-818</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">(HKD/RMB/USD/EUR/GBP)</div>
                                 </div>

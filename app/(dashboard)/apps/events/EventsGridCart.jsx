@@ -57,7 +57,7 @@ const EventCard = ({ event, handleFormOpen, handleDelete, handleViewSponsor }) =
 
                 {/*  edit icon set */}
                 <div
-                    onClick={() => isMemberManager() && handleFormOpen(event)}
+                    // onClick={() => isMemberManager() && handleFormOpen(event)}
                     className={`absolute right-4 top-4 z-10 ${isMemberManager() ? '' : 'cursor-not-allowed'}`}
                     disabled={!isMemberManager()}
                     title={!isMemberManager() ? 'You do not have permission to edit events' : 'Edit Event'}
@@ -121,7 +121,7 @@ const EventCard = ({ event, handleFormOpen, handleDelete, handleViewSponsor }) =
                         // }}
                         // title={'You do not have permission to see this'}
                         className={`w-full flex-1 items-center justify-center text-nowrap rounded-md px-1 py-3 text-center text-sm font-medium text-white transition-colors lg:flex-1
-                        cursor-pointer bg-[#30CFCE] hover:bg-[rgb(62,143,143)]'`}
+                        cursor-pointer bg-[#7e211f] hover:bg-[hsl(1,39%,46%)]]`}
                     >
                         <PiInvoiceFill className="mr-2 inline-block h-5 w-5" />
                         View Invoices
@@ -132,8 +132,8 @@ const EventCard = ({ event, handleFormOpen, handleDelete, handleViewSponsor }) =
                         onClick={() => {
                             handleViewSponsor(attributes?.event_sponsorship_fields);
                         }}
-                        className="w-full flex-1 cursor-pointer items-center justify-center text-nowrap rounded-md bg-[#30CFCE] px-1 py-3 text-sm font-medium text-white
-                                      transition-colors hover:bg-[rgb(62,143,143)] lg:flex-1"
+                        className="w-full flex-1 cursor-pointer items-center justify-center text-nowrap rounded-md bg-[#7e211f] px-1 py-3 text-sm font-medium text-white
+                                      transition-colors hover:bg-[hsl(1,39%,46%)]] lg:flex-1"
                     >
                         <TbDevicesSearch className="mr-2 inline-block h-5 w-5" />
                         Sponsorship Dashboard
@@ -142,7 +142,7 @@ const EventCard = ({ event, handleFormOpen, handleDelete, handleViewSponsor }) =
                 {/* View Participants Button */}
                 <Link
                     href={`/apps/events/${attributes?.event_name}`}
-                    className="flex w-full items-center justify-center text-nowrap rounded-md bg-[#30CFCE] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[rgb(62,143,143)] lg:flex-1"
+                    className="flex w-full items-center justify-center text-nowrap rounded-md bg-[#7e211f] px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-[hsl(1,39%,46%)]] lg:flex-1"
                 >
                     <IoMdContacts className="mr-1 inline-block h-5 w-5" />
                     View Participants

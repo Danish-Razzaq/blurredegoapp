@@ -93,7 +93,7 @@ const Events = () => {
 
             <div className="mb-2 flex justify-end">
                 <button
-                    className={`hover:bg-[rgb(62,143,143)] rounded bg-[#30CFCE] px-4
+                    className={`hover:bg-[rgb(62,143,143)] rounded bg-[#7e211f] px-4
                     py-2 mb-2 text-white `}
                     onClick={() => setShow(true)}
                     // disabled={!isMemberManager()}

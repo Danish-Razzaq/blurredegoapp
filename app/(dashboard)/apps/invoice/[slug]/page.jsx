@@ -5,6 +5,7 @@ import { apiCaller } from '@/utils/api';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import PaginatedInvoiceTable from '@/components/PaginatedInvoiceTable';
+import Link from 'next/link';
 const PreviewInvoice = () => {
     const params = useParams();
 
@@ -141,8 +142,8 @@ const PreviewInvoice = () => {
                                 <div className="space-y-1 text-white-dark">
                                     <div>Issue For:</div>
                                     <div className="font-semibold text-black dark:text-white">{invoiceData?.attributes?.companyName ||
-                                        "Bluured Ego Limited"}</div>
-                                    <div>{invoiceData?.attributes?.companyEmail || "blurredEgo@limited.com"}</div>
+                                        "LogiFem Limited"}</div>
+                                    <div>{invoiceData?.attributes?.companyEmail || "logiFem@limited.com"}</div>
                                     <div>{appPack?.attributes?.mobile1 || invoiceData?.attributes?.Invoice_data?.mobile || "1234567890"}</div>
                                     <div>{appPack?.attributes?.mainOfficeAddress || invoiceData?.attributes?.Invoice_data?.address || "123 Main St, City, Country"}</div>
                                 </div>
@@ -167,7 +168,12 @@ const PreviewInvoice = () => {
                         </div>
                         <br />
                         <div className="table-responsive ">
-                            <div className="mb-1 flex flex-wrap items-center  justify-end">
+                            <div className="mb-1 flex flex-wrap items-center gap-2  justify-end">
+                                 <Link href={`/components/Application/InvoiceOnline/${invoiceData?.id || Math.random(1000 * 1000)}`}>
+                                    <button type="button" className="btn btn-primary btn-lg-d gap-2">
+                                        Pay Online
+                                    </button>
+                                </Link>
                                 <button type="button" className="print-button btn btn-primary btn-lg-d gap-2" onClick={() => exportTable()}>
                                     <IconPrinter />
                                     Print
@@ -234,7 +240,7 @@ const PreviewInvoice = () => {
                                 <div className="xl:1/3 text-nowrap lg:w-1/2  lg:text-lg  max-lg:text-xs">
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs">
                                         <div className="text-white-dark ">Account Name:</div>
-                                        <div className="whitespace-nowrap">Blurred Ego LIMITED</div>
+                                        <div className="whitespace-nowrap">LogiFem LIMITED</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs  ">
                                         <div className="text-white-dark">BANK NAME:</div>
@@ -250,7 +256,7 @@ const PreviewInvoice = () => {
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">
                                         <div className="text-nowrap text-white-dark">Multiple Currency Account No:</div>
-                                        <div className="text-nowrap">004-801-772609-838</div>
+                                        <div className="text-nowrap">004-801-773609-818</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">(HKD/RMB/USD/EUR/GBP)</div>
                                 </div>

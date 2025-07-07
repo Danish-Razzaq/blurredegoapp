@@ -538,7 +538,7 @@ hover:text-primary hover:before:!bg-primary dark:before:bg-gray-500 dark:hover:b
     }
     table thead tr,
     table tfoot tr {
-        @apply border-b-0 !bg-[#30cfce]  text-white dark:!bg-[#1a2941];
+        @apply border-b-0 !bg-[#7e211f]  text-white dark:!bg-[#1a2941];
     }
     table thead tr th,
     table tfoot tr th,
@@ -1173,7 +1173,7 @@ h6 {
     background-color: #fec201;
 }
 .red {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 
 .bg-brand-2 {
@@ -1201,11 +1201,11 @@ h6 {
 }
 
 .color-brand-1 {
-    color: #30cfce !important;
+    color: #7e211f !important;
 }
 
 .color-brand-2 {
-    color: #30cfce !important;
+    color: #7e211f !important;
 }
 .color-main {
     color: white;
@@ -1409,7 +1409,7 @@ h6 {
 }
 
 .bg-1 {
-    background-color: #30cfce !important;
+    background-color: #7e211f !important;
 }
 
 .bg-2 {
@@ -1579,7 +1579,7 @@ a:hover {
 
 .pagination li a:hover,
 .pagination li a.active {
-    background-color: #30cfce;
+    background-color: #7e211f;
     border-color: rgba(31, 20, 15, 1);
     color: #034460;
 }
@@ -1887,7 +1887,7 @@ body {
 }
 .btn.btn-brand-1 {
     padding: 9px 20px;
-    background: #30cfce;
+    background: #7e211f;
     border-radius: 3px; 
     color: white;
     font-size: 14px;
@@ -1901,7 +1901,7 @@ body {
     margin-right: 8px;
 }
 .btn.btn-brand-1:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: white;
 }
 .btn.btn-brand-1:disabled {
@@ -1916,7 +1916,7 @@ body {
 .btn.btn-brand-1-big {
     padding: 18px 26px;
     color: white;
-    background: #30cfce;
+    background: #7e211f;
     border-radius: 0px;
     font-size: 14px;
     line-height: 14px;
@@ -1929,7 +1929,7 @@ body {
     margin-right: 8px;
 }
 .btn.btn-brand-1-big:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: white;
     font-weight: 500;
 }
@@ -1942,7 +1942,7 @@ body {
     font-weight: 500;
     color: white;
     padding: 17px 26px;
-    background-color: #30cfce;
+    background-color: #7e211f;
     border-radius: 0px;
 }
 .btn.btn-brand-2:hover {
@@ -1966,7 +1966,7 @@ body {
     padding: 0px;
     font-size: 14px;
     line-height: 14px;
-    color: #30cfce;
+    color: #7e211f;
     box-shadow: none;
 }
 .btn.btn-link span {
@@ -1977,7 +1977,7 @@ body {
     height: 16px;
     line-height: 16px;
     text-align: center;
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .btn.btn.link :hover span {
     background-color: rgba(31, 20, 15, 1);
@@ -2013,7 +2013,7 @@ body {
     background-color: rgba(31, 20, 15, 1);
 }
 .btn.btn-link-brn :hover span {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .btn-link-brn span svg {
     height: 10px;
@@ -2034,7 +2034,7 @@ body {
     padding: 18px 26px 18px 0px;
 }
 .btn.btn.btn-link-medium:hover {
-    color: #30cfce;
+    color: #7e211f;
 }
 .btn.btn-link-medium svg {
     color: #034460;
@@ -2072,7 +2072,7 @@ body {
     margin-right: 13px;
 }
 .btn.btn-get-quote:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: #fff;
 }
 .btn.btn-get-quote:hover * {
@@ -2087,7 +2087,7 @@ body {
 .btn.btn-default {
     background-color: #e8e9ed;
     padding: 12px 20px;
-    color: #30cfce;
+    color: #7e211f;
     border-radius: 0px;
     font-weight: 700;
     borderRadius: 4px;
@@ -2099,7 +2099,7 @@ body {
 }
 .btn.btn-default:hover {
     color: white !important;
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .btn.btn-default:hover svg {
     transform: rotate(-45deg);
@@ -2117,7 +2117,7 @@ body {
     padding: 7px 10px 7px 11px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 0px;
-    color: #30cfce;
+    color: #7e211f;
     font-size: 15px;
     box-shadow: none;
     line-height: 12px;
@@ -2125,7 +2125,7 @@ body {
 }
 .btn.btn-tag-red {
     padding: 7px 10px 7px 11px;
-    background: #30cfce;
+    background: #7e211f;
     border-radius: 0px;
     color: white;
     font-size: 15px;
@@ -2153,7 +2153,7 @@ body {
 .pricing-style-2 .card-plan.popular .btn-brand-2-full {
     padding: 8px 5px;
     color: #fff;
-    background: #30cfce;
+    background: #7e211f;
     border-radius: 0px;
     font-size: 16px;
     line-height: 28px;
@@ -2173,7 +2173,7 @@ body {
     transition-duration: 0.2s;
 }
 .btn.btn-brand-2-full:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .btn.btn-brand-2-full:hover svg {
     transform: rotate(-45deg);
@@ -2484,7 +2484,7 @@ body {
 }
 .swiper-pagination .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #30cfce;
+    background: #7e211f;
     width: 12px;
     height: 12px;
     border-radius: 7px;
@@ -2493,7 +2493,7 @@ body {
     background: #f2f3f4;
 }
 .swiper-pagination.swiper-pagination-2 .swiper-pagination-bullet-active {
-    background: #30cfce;
+    background: #7e211f;
 }
 
 .swiper-pagination-bullet {
@@ -2799,7 +2799,7 @@ body {
 .cardLeadingCompany {
     display: inline-block;
     width: 100%;
-    background-color: #30cfce;
+    background-color: #7e211f;
     border: 1px solid #2c7da1;
     padding: 25px 10px;
     text-align: center;
@@ -2823,7 +2823,7 @@ body {
     vertical-align: middle;
 }
 .cardLeadingCompany:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .cardLeadingCompany:hover .cardImage .img {
     background-color: rgb(196, 146, 82);
@@ -2860,7 +2860,7 @@ body {
 }
 .card-blog-grid .card-info a:hover,
 .card-blog-grid .card-info a:hover * {
-    color: #30cfce !important;
+    color: #7e211f !important;
 }
 .card-blog-grid .card-info .date-post {
     color: #6a838c;
@@ -2948,7 +2948,7 @@ body {
     margin-bottom: 12px;
 }
 .card-plan.popular {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .card-plan.popular .color-brand-2 {
     color: #FFFFFF !important;
@@ -2966,7 +2966,7 @@ body {
 }
 
 .card-offer {
-    border-bottom: 8px solid #30cfce;
+    border-bottom: 8px solid #7e211f;
     padding: 40px 40px 40px 40px;
     border-radius: 0px;
     margin-bottom: 30px;
@@ -3022,7 +3022,7 @@ body {
     /* color: white; */
 }
 .cardTeam .cardInfo:hover .color-brand-2 {
-    color: #30cfce !important;
+    color: #7e211f !important;
 }
 .cardTeam .cardInfo:hover .info-bottom p {
     color: #fff;
@@ -3545,7 +3545,7 @@ iframe {
     cursor: pointer;
 }
 .header .main-header .header-left .header-right .icon-list:hover {
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-header .header-left .header-right .icon-list .arrow-down {
     display: inline-block;
@@ -3557,7 +3557,7 @@ iframe {
     margin-top: -3px;
 }
 .header .main-header .header-left .header-right .icon-list .arrow-down:hover {
-    color: #30cfce;
+    color: #7e211f;
 }
 /* .header .nav-main-menu {
     width: auto;
@@ -3619,7 +3619,7 @@ iframe {
 
 .header .main-menu li a:hover {
     /* color: #034460; */
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-menu li a:hover i {
     opacity: 1;
@@ -3645,7 +3645,7 @@ iframe {
     border-radius: 0px;
     padding: 25px 30px 10px 30px;
     background-color: #fff;
-    border-top: 8px solid #30cfce;
+    border-top: 8px solid #7e211f;
     box-shadow: 0px 10px 42px rgba(1, 9, 20, 0.06);
     display: none;
 }
@@ -3676,7 +3676,7 @@ iframe {
     padding: 5px 0px;
 }
 .header .main-menu li div.sub-menu.five-col .menu-col .megamenu li a:hover {
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-menu li div.sub-menu .menu-inner {
     display: flex;
@@ -3697,7 +3697,7 @@ iframe {
 .header .main-menu li div.sub-menu .menu-inner li a {
     padding-left: 0px;
     padding-right: 0px;
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-menu li div.sub-menu .menu-inner li a svg {
     color: #8ea4ac;
@@ -3707,7 +3707,7 @@ iframe {
     color: #041c2f;
 }
 .header .main-menu li div.sub-menu .menu-inner li a:hover * {
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-menu li ul {
     opacity: 0;
@@ -3723,7 +3723,7 @@ iframe {
     border-radius: 0px;
     padding: 8px 0px 8px 0;
     background-color: #fff;
-    border-top: 8px solid #30cfce;
+    border-top: 8px solid #7e211f;
     box-shadow: 0px 10px 42px rgba(1, 9, 20, 0.06);
 }
 .header .main-menu li ul li {
@@ -3739,7 +3739,7 @@ iframe {
 .header .main-menu li ul li a:hover {
     padding-left: 25px;
     transition: 0.2s;
-    color: #30cfce;
+    color: #7e211f;
 }
 .header .main-menu li ul li a.closer {
     padding: 8px 22px 8px 22px;
@@ -4298,7 +4298,7 @@ iframe {
     margin: 5px 0;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li:hover > a {
-    color: #30cfce;
+    color: #7e211f;
     padding-left: 3px;
     transition-duration: 0.2s;
 }
@@ -4638,7 +4638,7 @@ iframe {
     transition-duration: 0.2s;
 }
 .footer .menu-footer li a:hover {
-    color: #30cfce;
+    color: #7e211f;
     transition-duration: 0.2s;
     padding-left: 2px;
 }
@@ -4681,7 +4681,7 @@ iframe {
     z-index: 999 !important;
     border: 0;
     transition-duration: 0.2s;
-    background-color: #30cfce;
+    background-color: #7e211f;
     line-height: 56px;
 }
 #scrollUp svg {
@@ -4743,7 +4743,7 @@ iframe {
 }
 
 .footer-2 {
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: white;
 }
 
@@ -6443,7 +6443,7 @@ footer a {
     border: 1px solid #e41912;
 }
 .swiper-button-prev-style-1:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
     background-image: none;
 }
 .swiper-button-prev-style-1 svg {
@@ -6465,7 +6465,7 @@ footer a {
     border: 1px solid #e41912;;
 }
 .swiper-button-next-style-1:hover {
-    background-color: #30cfce;
+    background-color: #7e211f;
     background-image: none;
 }
 .swiper-button-next-style-1 svg {
@@ -6530,7 +6530,7 @@ footer a {
     left: 55px;
     right: 55px;
     z-index: 23;
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: #fff;
     padding: 30px;
     display: flex;
@@ -6558,7 +6558,7 @@ footer a {
     width: 84px;
     height: 84px;
     border-radius: 50%;
-    background-color: #30cfce;
+    background-color: #7e211f;
     /* border: 1px solid #FEC201; */
     display: inline-block;
 }
@@ -6810,7 +6810,7 @@ textarea.form-control {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #30cfce;
+    background-color: #7e211f;
     color: white;
 }
 .accordion-button:not(.collapsed)::after {
@@ -7079,7 +7079,7 @@ textarea.form-control {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #30cfce;
+    background-color: #7e211f;
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
@@ -7119,7 +7119,7 @@ input:checked + .slider:before {
     box-shadow : 0px 10px 42px rgba(1, 9, 20, 0.06);
 }
 .pricing-style-2 .card-plan.popular {
-    background-color: #30cfce
+    background-color: #7e211f
 }
 
 .box-slide-customers-2 {
@@ -7224,7 +7224,7 @@ input:checked + .slider:before {
     opacity: 1;
 }
 .box-slider-homepage2 .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .box-slider-homepage2 .card-offer {
     box-shadow: none;
@@ -7368,7 +7368,7 @@ input:checked + .slider:before {
     width: 215px;
     height: 144px;
     z-index: 1;
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 .box-item-number .item-number {
     position: relative;
@@ -7591,7 +7591,7 @@ input:checked + .slider:before {
 }
 
 .box-button-play-2 {
-    background-color: #30cfce;
+    background-color: #7e211f;
     padding: 36px 38px 36px 38px;
     max-width: 325px;
     width: 100%;
@@ -7952,7 +7952,7 @@ a.color-brand-2:hover {
 }
 
 .box-cover-contactform {
-    background-color: #30cfce;
+    background-color: #7e211f;
 }
 
 .hero-faqs .banner-trackyourparcel {
@@ -8928,7 +8928,7 @@ a.color-brand-2:hover {
     }
 
     .box-cover-contactform {
-        background-color: #30cfce;
+        background-color: #7e211f;
     }
 
     .hero-faqs .banner-trackyourparcel {
@@ -10377,7 +10377,7 @@ for layout centerd
     color: blue;
 }
 .blogContent a:hover {
-  color: #30cfce
+  color: #7e211f
 }
 
 
@@ -10395,7 +10395,7 @@ for layout centerd
     right: 0;
     height: 50px; /* Length of the right border */
     width: 8px; /* Width of the right border */
-    background-color: #30cfce; /* Right border color */
+    background-color: #7e211f; /* Right border color */
 }
 
 .partial-border::after {
@@ -10405,7 +10405,7 @@ for layout centerd
     right: 0;
     width: 50px; /* Length of the top border */
     height: 8px; /* Height of the top border */
-    background-color: #30cfce; /* Top border color */
+    background-color: #7e211f; /* Top border color */
 }
 
 

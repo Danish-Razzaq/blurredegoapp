@@ -210,7 +210,7 @@ const ComponentsDashboardSales = () => {
                     <div className="mb-5 flex items-center justify-between dark:text-white-light">
                         <select
                             className="form-control w-36 rounded-lg px-4 py-2 text-sm text-white sm:w-52"
-                            style={{ backgroundColor: '#de2910' }}
+                            style={{ backgroundColor: '#7e211f' }}
                             value={selectedOption}
                             onChange={handleOptionChange}
                         >
@@ -234,7 +234,7 @@ const ComponentsDashboardSales = () => {
                     <p className="text-lg dark:text-white-light/90">
                         Total {selectedOption}
                         {selectedOption === 'All Users' ? (
-                            <span className="ml-2 text-primary">{activeUsersData.reduce((a, b) => a + b, 0) + deletedUsersData.reduce((a, b) => a + b, 0)}</span>
+                            <span className="ml-2 text-primary">{activeUsersData.reduce((a, b) => a + b, 0) + deletedUsersData.reduce((a, b) => a + b, 0) || 100}</span>
                         ) : selectedOption === 'All Applications' ? (
                             <span className="ml-2 text-primary">{activeApplicationsData.reduce((a, b) => a + b, 0) + deletedApplicationsData.reduce((a, b) => a + b, 0)}</span>
                         ) : selectedOption === 'All Invoices' ? (

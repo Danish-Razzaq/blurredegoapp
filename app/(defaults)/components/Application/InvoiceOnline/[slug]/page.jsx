@@ -9,9 +9,7 @@ import './style.css';
 import axios from 'axios';
 import Image from 'next/image';
 
-
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
-
 
 const PaymentForm = ({ invoiceId }) => {
     const FRONTEND_URL = process.env.NEXT_PUBLIC_FRONTEND_URL;
@@ -55,7 +53,7 @@ const PaymentForm = ({ invoiceId }) => {
     );
 };
 
-export default function InvoicePage({ }) {
+export default function InvoicePage({}) {
     const [clientSecret, setClientSecret] = useState(null);
     const params = useParams();
     const router = useRouter();
@@ -71,12 +69,11 @@ export default function InvoicePage({ }) {
     const onlinePaymentFee = baseAmount * 0.03; // Calculate 3% fee for online payment
     const amountInDollars = baseAmount + onlinePaymentFee;
 
-
     useEffect(() => {
         // Fetch the client secret from the server
         const fetchClientSecret = async () => {
             const user = getUser(); // Make sure to import this utility function correctly
-            
+
             try {
                 const response = await fetch(`${apiUrl}/invoices/pay/${invoiceId}`, {
                     method: 'POST',
@@ -94,9 +91,8 @@ export default function InvoicePage({ }) {
         const fetchInvoiceData = async () => {
             const user = getUser(); // Make sure to import this utility function correctly
             if (!user) {
-                alert('Access restricted! Please log in to proceed with the payment.')
+                alert('Access restricted! Please log in to proceed with the payment.');
                 router.push('/login'); // Redirect to the login page
-
             }
             try {
                 const response = await fetch(`${apiUrl}/invoices/${invoiceId}`, {
@@ -126,46 +122,58 @@ export default function InvoicePage({ }) {
     };
     return (
         <>
-         <title>Invoice Payment</title>
-        <div className="AppWrapperContainer">
-            <div className="AppWrapperLeftMain red">
-                <Image className="wow  animate__animated animate__fadeIn mb-28" alt="Blurred Ego" src="/assets/imgs/template/logo-footer.png " width={158} height={55} />
-                <div className="AppWrapperLeft">
-                    <div>
-                        <p className="wow animate__animated animate__fadeInUp -mb-2 font-bold text-gray-300 sm:text-lg">Total Amount:</p>
+            <title>Invoice Payment</title>
+            <div className="AppWrapperContainer">
+                <div className="AppWrapperLeftMain red">
+                    <Image className="wow  animate__animated animate__fadeIn mb-28 rounded-full" alt="Blurred Ego" src="/assets/imgs/template/logo.png " width={158} height={55} />
+                    <div className="AppWrapperLeft">
+                        <div>
+                            <p className="wow animate__animated animate__fadeInUp -mb-2 font-bold text-gray-300 sm:text-lg">Total Amount:</p>
 
-                        <h2 className="wow animate__animated animate__fadeInUp mb-3 text-white">USD : ${amountInDollars}</h2>
-                        <p className="wow animate__animated animate__fadeInUp  text-white sm:text-lg">
-                          {invoiceData?.attributes?.Invoice_data?.isCustomInvoice ? "Total Invoice Amount: " : "Membership Fee: "}
-                            <span className="text-gray-300"> ${invoiceData?.attributes?.amount}.00</span>
-                        </p>
-                        <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
-                            Card Processing Fee (3%): <span className="text-gray-300"> ${onlinePaymentFee.toFixed(2)} </span>
-                        </p>
-                        <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
-                         {invoiceData?.attributes?.Invoice_data?.isCustomInvoice ? 'Bank' : 'Admin'} Fee: <span className="text-gray-300"> ${registrationFees.toFixed(2)}</span>
-                        </p>
+                            <h2 className="wow animate__animated animate__fadeInUp mb-3 text-white">USD : ${amountInDollars}</h2>
+                            <p className="wow animate__animated animate__fadeInUp  text-white sm:text-lg">
+                                {invoiceData?.attributes?.Invoice_data?.isCustomInvoice ? 'Total Invoice Amount: ' : 'Membership Fee: '}
+                                <span className="text-gray-300"> ${invoiceData?.attributes?.amount}.00</span>
+                            </p>
+                            <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
+                                Card Processing Fee (3%): <span className="text-gray-300"> ${onlinePaymentFee.toFixed(2)} </span>
+                            </p>
+                            <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
+                                {invoiceData?.attributes?.Invoice_data?.isCustomInvoice ? 'Bank' : 'Admin'} Fee: <span className="text-gray-300"> ${registrationFees.toFixed(2)}</span>
+                            </p>
 
-                        {/* if Discount */}
-                        <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
-                            Discount: <span className="text-gray-300"> ${invoiceData?.attributes?.discount || '0'}.00</span>
-                        </p>
-                    </div>
+                            {/* if Discount */}
+                            <p className="wow animate__animated animate__fadeInUp my-3 text-white sm:text-lg">
+                                Discount: <span className="text-gray-300"> ${invoiceData?.attributes?.discount || '0'}.00</span>
+                            </p>
+                        </div>
 
-                    {/* <div className="payment-Image wow animate__animated animate__fadeInIn my-3 flex h-[80%] w-[80%] justify-center ">
+                        {/* <div className="payment-Image wow animate__animated animate__fadeInIn my-3 flex h-[80%] w-[80%] justify-center ">
                         <img alt="Blurred Ego Payment Image" src="/assets/images/invicepayment.png " />
                     </div> */}
+                    </div>
                 </div>
+                <div class="flex min-h-screen items-center justify-center  text-white">
+                    <div class="w-full max-w-md rounded-xl bg-gray-500 p-6 shadow-lg">
+                        <h2 class="mb-2 text-2xl font-semibold text-white">Complete Your Payment</h2>
+                        <p class="mb-6 text-sm text-gray-300">Please enter your card details to complete the payment.</p>
+
+                        <form>
+                            <input type="text" placeholder="Cardholder Name" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            <input type="text" placeholder="Card Number" class="mb-4 w-full rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            <div class="mb-4 flex gap-4">
+                                <input type="text" placeholder="MM/YY" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <input type="text" placeholder="CVC" class="w-1/2 rounded bg-gray-700 p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+                            <button type="submit" class="red w-full rounded py-2 font-semibold text-white">
+                                Pay Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div></div>
             </div>
-            <div className="AppWrapper">
-                {clientSecret && (
-                    <Elements stripe={stripePromise} options={options}>
-                        <PaymentForm invoiceId={invoiceId} />
-                    </Elements>
-                )}
-            </div>
-            <div></div>
-        </div>
         </>
     );
 }

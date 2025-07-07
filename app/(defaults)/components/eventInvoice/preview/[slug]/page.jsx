@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import axios from 'axios';
 import PaginatedInvoiceTable from '@/components/PaginatedInvoiceTable';
-import {dummyInvoiceItems} from '@/Data/eventinvoice'
+import { dummyInvoiceItems } from '@/Data/eventinvoice';
 const PreviewInvoice = () => {
     const params = useParams();
 
@@ -53,7 +53,7 @@ const PreviewInvoice = () => {
             year: 'numeric',
         }).format(date);
     };
-      const getDueDate = (createdAt, daysToAdd = 7) => {
+    const getDueDate = (createdAt, daysToAdd = 7) => {
         if (!createdAt) return null;
 
         const date = new Date(createdAt);
@@ -61,7 +61,6 @@ const PreviewInvoice = () => {
         return date.toISOString(); // Convert back to string to use with formatDate
     };
 
-    
     // const membershipFees = parseFloat(invoiceData?.invoiceAmount);
 
     const registrationFees = invoiceData?.registrationFees || 0;
@@ -96,19 +95,17 @@ const PreviewInvoice = () => {
     const shareRoomdelegates = invoiceData?.shareRoomDiscount || 0;
 
     const items = [
-        ...(
-            invoiceData?.registrationFees > 0
-                ? [
-            
-            {
-            id: sponsorshipItems.length + 1,
-            title: 'Event Registration Fees',
-            quantity: '1',
-            price: registrationFees,
-            amount: registrationFees,
-        }
-        ]
-        : []),
+        ...(invoiceData?.registrationFees > 0
+            ? [
+                  {
+                      id: sponsorshipItems.length + 1,
+                      title: 'Event Registration Fees',
+                      quantity: '1',
+                      price: registrationFees,
+                      amount: registrationFees,
+                  },
+              ]
+            : []),
         ...(additionAttendees.quantity > 0
             ? [
                   {
@@ -137,15 +134,13 @@ const PreviewInvoice = () => {
 
         ...(newItem.length > 0
             ? newItem.map((item, index) => ({
-                    id: sponsorshipItems.length + 4 + index,
-                    title: item.title,
-                    quantity: item.quantity || '1',
-                    price: item.price,
-                    amount: item.amount,
-                }))
+                  id: sponsorshipItems.length + 4 + index,
+                  title: item.title,
+                  quantity: item.quantity || '1',
+                  price: item.price,
+                  amount: item.amount,
+              }))
             : []),
-
-
     ];
 
     // Define table columns
@@ -180,15 +175,14 @@ const PreviewInvoice = () => {
                 <div className="mt-1  ">
                     {/* Content of the panel */}
                     <div className="panel container bg-transparent shadow-none max-lg:px-7">
-                         <div className="flex  justify-between gap-3 ">
+                        <div className="flex  justify-between gap-3 ">
                             <div className="flex">
                                 <div className="space-y-1 text-white-dark">
                                     <div>Issue For:</div>
-                                    <div className="font-semibold text-black dark:text-white">{invoiceData?.attributes?.companyName ||
-                                        "Bluured Ego Limited"}</div>
-                                    <div>{invoiceData?.attributes?.companyEmail || "blurredEgo@limited.com"}</div>
-                                    <div>{invoiceData?.attributes?.mobile1 || invoiceData?.attributes?.Invoice_data?.mobile || "1234567890"}</div>
-                                    <div>{invoiceData?.attributes?.mainOfficeAddress || invoiceData?.attributes?.Invoice_data?.address || "123 Main St, City, Country"}</div>
+                                    <div className="font-semibold text-black dark:text-white">{invoiceData?.attributes?.companyName || 'LogiFem Limited'}</div>
+                                    <div>{invoiceData?.attributes?.companyEmail || 'logiFem@limited.com'}</div>
+                                    <div>{invoiceData?.attributes?.mobile1 || invoiceData?.attributes?.Invoice_data?.mobile || '1234567890'}</div>
+                                    <div>{invoiceData?.attributes?.mainOfficeAddress || invoiceData?.attributes?.Invoice_data?.address || '123 Main St, City, Country'}</div>
                                 </div>
                             </div>
                             <div className="flex w-full flex-col justify-end  sm:flex-row  ">
@@ -216,53 +210,54 @@ const PreviewInvoice = () => {
                                     <IconPrinter />
                                     Print
                                 </button>
-                                <Link href={`/components/eventInvoice/InvoiceOnline/${invoiceAllData?.attributes?.event_taking_id || 
-                                `Blurred Ego-EVT-${Math.floor(100000000 + Math.random() * 9901)} `}`} >
+                                <Link
+                                    href={`/components/eventInvoice/InvoiceOnline/${invoiceAllData?.attributes?.event_taking_id || `Blurred Ego-EVT-${Math.floor(100000000 + Math.random() * 9901)} `}`}
+                                >
                                     <button type="button" className="btn btn-primary btn-lg-d gap-2">
                                         Pay Online
                                     </button>
                                 </Link>
                             </div>
-                           {/* Table that show the invoice items */}
+                            {/* Table that show the invoice items */}
                             <PaginatedInvoiceTable items={dummyInvoiceItems} columns={columns} itemsPerPage={6} />
                         </div>
                         <hr className="my-3" />
-                         <div className="grid grid-cols-1 lg:grid-cols-2 ">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 ">
                             <div></div>
                             {/* Content Container */}
-                                   <div className="space-y-2 ltr:text-right rtl:text-left">
+                            <div className="space-y-2 ltr:text-right rtl:text-left">
                                 {/* Bank Fees */}
                                 <div className="flex items-center justify-between">
-                                    <span className="font-medium flex-1">Bank Fees</span>
-                        <span className="w-[37%]">${(50).toFixed(2)}</span>  
+                                    <span className="flex-1 font-medium">Bank Fees</span>
+                                    <span className="w-[37%]">${(50).toFixed(2)}</span>
                                 </div>
 
                                 {/* Subtotal */}
                                 <div className="flex items-center justify-between">
-                                    <span className="font-medium flex-1">Subtotal</span>
+                                    <span className="flex-1 font-medium">Subtotal</span>
                                     <span className="w-[37%]">${(2050).toFixed(2)}</span>
                                 </div>
 
                                 {/* Share Room Discount */}
                                 {/* {discountShareRoom > 0 && ( */}
-                                    <div className="flex items-center justify-between  text-red-600">
-                                        <span className="text-nowrap font-medium flex-1">Share Room Discount (25% for shared rooms)</span>
-                                        <span className="w-[37%]">- ${(150).toFixed(2)}</span>
-                                    </div>
-                                 {/* )}  */}
+                                <div className="flex items-center justify-between  text-red-600">
+                                    <span className="flex-1 text-nowrap font-medium">Share Room Discount (25% for shared rooms)</span>
+                                    <span className="w-[37%]">- ${(150).toFixed(2)}</span>
+                                </div>
+                                {/* )}  */}
 
                                 {/* Additional Discount */}
                                 {/* {discount > 0 && ( */}
-                                    <div className="flex items-center  justify-between  text-red-600">
-                                        <span className="text-nowrap font-medium flex-1">Additional Discount</span>
-                                        <span className="w-[37%]">- ${(20).toFixed(2)}</span>
-                                    </div>
+                                <div className="flex items-center  justify-between  text-red-600">
+                                    <span className="flex-1 text-nowrap font-medium">Additional Discount</span>
+                                    <span className="w-[37%]">- ${(20).toFixed(2)}</span>
+                                </div>
                                 {/* )} */}
 
                                 {/* Grand Total */}
 
                                 <div className="flex items-center justify-between border-t pt-2 text-lg font-semibold text-green-700">
-                                    <span className='flex-1'>Grand Total</span>
+                                    <span className="flex-1">Grand Total</span>
                                     <span className="w-[37%]">USD ${(1880).toFixed(2)}</span>
                                 </div>
                             </div>
@@ -277,7 +272,7 @@ const PreviewInvoice = () => {
                                 <div className="xl:1/3 text-nowrap lg:w-1/2  lg:text-lg  max-lg:text-xs">
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs">
                                         <div className="text-white-dark ">Account Name:</div>
-                                        <div className="whitespace-nowrap">Blurred Ego LIMITED</div>
+                                        <div className="whitespace-nowrap">LogiFem LIMITED</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2 max-lg:text-xs  ">
                                         <div className="text-white-dark">BANK NAME:</div>
@@ -293,11 +288,10 @@ const PreviewInvoice = () => {
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">
                                         <div className="text-nowrap text-white-dark">Multiple Currency Account No:</div>
-                                        <div className="text-nowrap">004-801-772609-838</div>
+                                        <div className="text-nowrap">004-801-773609-818</div>
                                     </div>
                                     <div className="mb-2 flex w-full items-start gap-2">(HKD/RMB/USD/EUR/GBP)</div>
                                 </div>
-                                
                             </div>
                         </div>
                         <img src="/assets/images/invoicefooter.svg" alt="footer" className="h-[20%] w-full" />
