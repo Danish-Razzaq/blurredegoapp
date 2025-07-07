@@ -19,7 +19,7 @@ const RegistrationDataView = () => {
     const getSingleRecord = async () => {
         const response = await apiCallerWithStatusCode('get', `event-participants/${slug}`);
         // console.log('response', response);
-        setFormData(response.data.data.attributes);
+        // setFormData(response.data.data.attributes);
         // setMoveTOBackScreen(response.data.data.attributes.event_name);
     };
     const getSponsorshipFields = async () => {

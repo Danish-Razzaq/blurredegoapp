@@ -108,7 +108,7 @@ const EventCard = ({ event, handleFormOpen, handleDelete, handleViewSponsor }) =
                 {/* Created Time */}
                 <div className="flex items-center gap-2 text-xs text-gray-400">
                     <FiClock className="h-4 w-4" />
-                    <span>Created {formatDate(attributes.createdAt)}</span>
+                    <span>Created {attributes.createdAt}</span>
                 </div>
                 {/* Sponsorship Action Buttons */}
                 {/* View Sponsorship Dashboard Button */}

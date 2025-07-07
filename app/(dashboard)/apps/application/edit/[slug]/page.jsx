@@ -247,12 +247,12 @@ const EditApplication = () => {
                 Back
             </Link>
             <div className=" container    rounded ">
-                <form onSubmit={handleSubmit(onSubmit)} className="mt-[30px] space-y-6 p-5 shadow-lg  lg:p-20">
+                <form onSubmit={handleSubmit(onSubmit)} className="mt-[30px] space-y-6 p-3 shadow-lg  lg:p-20 w-[100%] overflow-x-scroll ">
 
                     {/* Membership Input Feilds */}
                     <div className="flex flex-col justify-center gap-4 text-center">
                         <h3>Types of Membership</h3>
-                        <span className="flex items-center justify-center gap-2 ">
+                        <span className="flex items-center justify-center gap-2 flex-wrap">
                             <p className="text-nowrap font-bold">Membership to Enroll</p>
                             <select className="red form-select w-[205px] border p-2 text-white" {...register('membershipType', { required: 'Membership Type is required' })} >
 
@@ -474,13 +474,13 @@ const EditApplication = () => {
                                 <label className="text-sm text-gray-700">Same as Main Address</label>
                             </span> */}
 
-                            <span className="relative h-11 w-full min-w-[200px]">
+                            <span className="relative h-11 w-full min-w-[200px] ">
                                 <input
                                     type="text"
                                     {...register('correspondenceAddress', {
                                         required: 'Correspondence Address is required',
                                     })}
-                                    className="input-Style peer w-full"
+                                    className="input-Style peer w-full flex overflow-scroll"
                                     placeholder="Correspondence Address (if differs from above)"
                                 />
                                 <label className="input-style-label">
@@ -613,7 +613,7 @@ const EditApplication = () => {
                                 className=" input-Style peer w-full"
                                 placeholder="Are you a member of local association / logistics network ?"
                             />
-                            <label className="input-style-label">
+                            <label className="input-style-label flex flex-wrap text-break break-words ">
                                 Are you a member of local association / logistics network ? <span className="text-red-500"> *</span>
                             </label>
                             {errors.containerTrading && <p className="text-red-500">{errors.containerTrading.message}</p>}
@@ -648,7 +648,7 @@ const EditApplication = () => {
                             {errors.companyInfo && <p className="text-red-500">{errors.companyInfo.message}</p>}
                         </div>
 
-                        <div className="max-sm:flex-wrap flex  justify-center gap-4 space-x-4">
+                        <div className="max-sm:flex-wrap flex  justify-center max-lg:flex-wrap gap-4 space-x-4">
                             {/* Business Certificate */}
                             <div className="flex flex-col items-center">
                                 <input

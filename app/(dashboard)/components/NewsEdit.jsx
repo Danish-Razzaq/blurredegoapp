@@ -138,7 +138,7 @@ const EditNews = ({ show, setShow, newsData }) => {
         <>
             {show && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="w-1/2 bg-white p-4 lg:w-1/3">
+                    <div className="w-[93%] bg-white p-4 lg:w-1/3">
                         <div className="mb-3 flex items-center justify-between">
                             <div />
                             <h1 className="text-2xl">Edit News</h1>
